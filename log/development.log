@@ -1,0 +1,1478 @@
+
+
+Started GET "/" for 220.136.226.253 at 2015-01-01 10:22:27 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 44ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/homw" for 220.136.226.253 at 2015-01-01 10:22:37 +0000
+
+ActionController::RoutingError (No route matches [GET] "/static_pages/homw"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (37.9ms)
+
+
+Started GET "/static_pages/home" for 220.136.226.253 at 2015-01-01 10:22:42 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+Warning. Error encountered while saving cache 7637cdee862da91a0a09f38ae086420d5d9ca32b/static_pages.css.scssc: can't dump anonymous class #<Class:0x000000036f58f8>
+
+Completed 200 OK in 1068ms (Views: 1065.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 10:22:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 220.136.226.253 at 2015-01-01 10:22:43 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 10:22:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 220.136.226.253 at 2015-01-01 10:22:43 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 10:22:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 10:22:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 220.136.226.253 at 2015-01-01 10:22:43 +0000
+
+
+Started GET "/static_pages/home" for 220.136.226.253 at 2015-01-01 10:26:03 +0000
+
+ActionController::RoutingError (No route matches [GET] "/static_pages/home"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (27.1ms)
+
+
+Started GET "/" for 220.136.226.253 at 2015-01-01 10:26:07 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 10:26:07 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 10:26:07 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 10:26:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 10:26:07 +0000
+
+
+Started GET "/" for 220.136.226.253 at 2015-01-01 10:26:28 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache 7637cdee862da91a0a09f38ae086420d5d9ca32b/custom.css.scssc: can't dump anonymous class #<Class:0x000000036f58f8>
+
+Completed 500 Internal Server Error in 38ms
+
+Sass::SyntaxError (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ubuntu/workspace/vivotekv1/app/assets/images
+  /home/ubuntu/workspace/vivotekv1/app/assets/javascripts
+  /home/ubuntu/workspace/vivotekv1/app/assets/stylesheets
+  /home/ubuntu/workspace/vivotekv1/vendor/assets/javascripts
+  /home/ubuntu/workspace/vivotekv1/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/app/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/app/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/turbolinks-2.3.0/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/jquery-rails-4.0.0.beta2/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/coffee-rails-4.1.0/lib/assets/javascripts
+  (in /home/ubuntu/workspace/vivotekv1/app/assets/stylesheets/custom.css.scss:1)):
+  app/assets/stylesheets/custom.css.scss:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3593440390264149379_45433240'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (11.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (57.5ms)
+
+
+Started GET "/" for 220.136.226.253 at 2015-01-01 10:27:53 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache 7637cdee862da91a0a09f38ae086420d5d9ca32b/custom.css.scssc: can't dump anonymous class #<Class:0x000000036f58f8>
+
+Completed 500 Internal Server Error in 41ms
+
+Sass::SyntaxError (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ubuntu/workspace/vivotekv1/app/assets/images
+  /home/ubuntu/workspace/vivotekv1/app/assets/javascripts
+  /home/ubuntu/workspace/vivotekv1/app/assets/stylesheets
+  /home/ubuntu/workspace/vivotekv1/vendor/assets/javascripts
+  /home/ubuntu/workspace/vivotekv1/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/app/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/app/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/turbolinks-2.3.0/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/jquery-rails-4.0.0.beta2/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/coffee-rails-4.1.0/lib/assets/javascripts
+  (in /home/ubuntu/workspace/vivotekv1/app/assets/stylesheets/custom.css.scss:1)):
+  app/assets/stylesheets/custom.css.scss:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3593440390264149379_45433240'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (316.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (366.6ms)
+
+
+Started GET "/" for 220.136.226.253 at 2015-01-01 10:27:55 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache 7637cdee862da91a0a09f38ae086420d5d9ca32b/custom.css.scssc: can't dump anonymous class #<Class:0x000000036f58f8>
+
+Completed 500 Internal Server Error in 37ms
+
+Sass::SyntaxError (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/ubuntu/workspace/vivotekv1/app/assets/images
+  /home/ubuntu/workspace/vivotekv1/app/assets/javascripts
+  /home/ubuntu/workspace/vivotekv1/app/assets/stylesheets
+  /home/ubuntu/workspace/vivotekv1/vendor/assets/javascripts
+  /home/ubuntu/workspace/vivotekv1/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/app/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/app/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/turbolinks-2.3.0/lib/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/jquery-rails-4.0.0.beta2/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/coffee-rails-4.1.0/lib/assets/javascripts
+  (in /home/ubuntu/workspace/vivotekv1/app/assets/stylesheets/custom.css.scss:1)):
+  app/assets/stylesheets/custom.css.scss:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3593440390264149379_45433240'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (11.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (60.0ms)
+
+
+Started GET "/" for 220.136.226.253 at 2015-01-01 10:28:18 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.1ms)
+Warning. Error encountered while saving cache 7637cdee862da91a0a09f38ae086420d5d9ca32b/custom.css.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 0cdc6737560e11ce2c9b4d52cd0d704ce82fd24d/_bootstrap-sprockets.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 0cdc6737560e11ce2c9b4d52cd0d704ce82fd24d/bootstrap.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_variables.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_mixins.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_hide-text.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_opacity.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_image.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_labels.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_reset-filter.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_resize.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_responsive-visibility.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_size.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_tab-focus.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_text-emphasis.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_text-overflow.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_vendor-prefixes.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_alerts.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_buttons.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_panels.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_pagination.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_list-group.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_nav-divider.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_forms.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_progress-bar.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_table-row.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_background-variant.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_border-radius.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_gradients.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_clearfix.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_center-block.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_nav-vertical-align.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_grid-framework.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 6e5e69eac2fc40f56bbeb5c941159c37154fa2df/_grid.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_normalize.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_print.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_glyphicons.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_scaffolding.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_type.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_code.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_grid.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_tables.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_forms.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_buttons.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_component-animations.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_dropdowns.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_button-groups.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_input-groups.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_navs.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_navbar.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_pagination.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_pager.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_labels.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_badges.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_jumbotron.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_thumbnails.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_alerts.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_progress-bars.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_media.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_list-group.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_panels.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_responsive-embed.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_wells.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_close.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_modals.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_tooltip.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_popovers.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_carousel.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_utilities.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+Warning. Error encountered while saving cache 354166196ffaa1345b9396454028da0b5d60f8f4/_responsive-utilities.scssc: can't dump anonymous class #<Class:0x00000003c28910>
+
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 4344ms (Views: 4331.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 220.136.226.253 at 2015-01-01 10:28:22 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 10:28:22 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 10:28:22 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 10:28:22 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 10:28:22 +0000
+  [1m[36m (14.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (12.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateIpcams (20150101103338)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "ipcams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type1" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150101103338"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)  [["type1", "NO1"], ["created_at", "2015-01-01 11:43:24.082278"], ["updated_at", "2015-01-01 11:43:24.082278"]]
+  [1m[36m (11.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["type1", "fvck"], ["created_at", "2015-01-01 11:44:00.054559"], ["updated_at", "2015-01-01 11:44:00.054559"]]
+  [1m[35m (19.7ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "ipcams"[0m
+  [1m[35mIpcam Load (0.3ms)[0m  SELECT  "ipcams".* FROM "ipcams"  ORDER BY "ipcams"."id" ASC LIMIT 1 OFFSET 1
+
+
+Started GET "/" for 220.136.226.253 at 2015-01-01 11:49:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+Warning. Error encountered while saving cache 7637cdee862da91a0a09f38ae086420d5d9ca32b/ipcams.css.scssc: can't dump anonymous class #<Class:0x00000003dea320>
+
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 604ms (Views: 590.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 11:49:38 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 11:49:38 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 11:49:38 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 11:49:38 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 11:49:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 11:49:38 +0000
+
+
+Started GET "/ipcam/1" for 220.136.226.253 at 2015-01-01 11:49:42 +0000
+
+ActionController::RoutingError (No route matches [GET] "/ipcam/1"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (37.2ms)
+
+
+Started GET "/ipcams/1" for 220.136.226.253 at 2015-01-01 11:49:51 +0000
+
+ActionController::RoutingError (No route matches [GET] "/ipcams/1"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (28.2ms)
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 11:50:38 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 128ms (Views: 126.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 11:50:38 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 11:50:38 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 11:50:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 11:50:38 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 11:52:41 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 149ms (Views: 147.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 11:52:41 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 11:52:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 11:52:41 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 11:52:41 +0000
+
+
+Started GET "/ipcams/1" for 220.136.226.253 at 2015-01-01 11:52:44 +0000
+Processing by IpcamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mIpcam Load (0.3ms)[0m  SELECT  "ipcams".* FROM "ipcams" WHERE "ipcams"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered ipcams/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 149ms (Views: 122.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 11:52:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 11:52:45 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 11:52:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 11:52:45 +0000
+  [1m[36m (12.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (11.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateIpcams (20150101103338)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "ipcams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type1" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150101103338"]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 220.136.226.253 at 2015-01-01 11:56:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 240ms (Views: 227.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 11:56:11 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 11:56:11 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 11:56:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 11:56:11 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 11:56:23 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 204ms (Views: 196.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 11:56:23 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 11:56:23 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 11:56:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 11:56:23 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 11:56:31 +0000
+
+AbstractController::ActionNotFound (The action 'create' could not be found for IpcamsController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.4/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 11:57:39 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 126.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 11:57:39 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 11:57:39 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 11:57:39 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 11:57:39 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 11:57:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 11:57:39 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 11:57:42 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NcN7s654UxGANctLE0/WUTQaA1W8Q6xZkJn606WddDmNTvMmAnv841E1z8oWiceuBnaUedmr1PJmW1eH3eEe8Q==", "ipcam"=>{"type1"=>"ddd"}, "commit"=>"Create Ipcam type"}
+Completed 500 Internal Server Error in 3ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/ipcams_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (15.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (52.4ms)
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 11:58:51 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 143ms (Views: 136.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 11:58:51 +0000
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 11:58:51 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 11:58:51 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 11:58:51 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 11:58:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 11:58:51 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 11:58:53 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LFxpvj0Fkcvl/jAYVJJeiAe+paXfL79LpZErHS6qO5OU0eErkQY+OTT+NJlRVE93NdIyibrHx+BTU4ZJVtZRWw==", "ipcam"=>{"type1"=>"ddd"}, "commit"=>"Create Ipcam type"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/ipcams_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (42.4ms)
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 12:02:38 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 157ms (Views: 150.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:02:38 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:02:38 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:02:38 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:02:39 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:02:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:02:39 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 12:02:41 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vZfN1PHy7l7rn78aXL75T9RkBiMLGsqgVOaZ27lOxXoFGkVBXfFBrDqfu5tZeOiw5giRD27ysguiJDSPwTKvsg==", "ipcam"=>{"type1"=>"ddd"}, "commit"=>"Create Ipcam type"}
+Completed 500 Internal Server Error in 4ms
+
+NameError (uninitialized constant IpcamsController::User):
+  app/controllers/ipcams_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.4@rails4/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (43.9ms)
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 12:03:00 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 146ms (Views: 139.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:00 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:00 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:00 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:00 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:00 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 12:03:02 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NthZBbywSUrnrIMIw3F0eFguFPhPu5hQWX+RhtSQ5KiOVdGQELPmuDash4nGt2WHakKD1CpT4PuvvTzSrOyOYA==", "ipcam"=>{"type1"=>"ddd"}, "commit"=>"Create Ipcam type"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["type1", "ddd"], ["created_at", "2015-01-01 12:03:02.963726"], ["updated_at", "2015-01-01 12:03:02.963726"]]
+  [1m[35m (10.9ms)[0m  commit transaction
+Redirected to https://rails-tutorial-tsengturtle.c9.io/ipcams/1
+Completed 302 Found in 20ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/ipcams/1" for 220.136.226.253 at 2015-01-01 12:03:03 +0000
+Processing by IpcamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIpcam Load (0.3ms)[0m  [1mSELECT  "ipcams".* FROM "ipcams" WHERE "ipcams"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered ipcams/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 160ms (Views: 136.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:03 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:03 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:03 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:03 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:03 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:03 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 12:03:46 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 143ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:46 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:46 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:46 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:46 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:46 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 12:03:51 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dKwOyCEbPTdcd0TYup7r7nWLox3hDnhl8xAREGxpobfMIYZdjRiSxY13QFm/WPoRR+c0MYTmAM4F0rxEFBXLfw==", "ipcam"=>{"type1"=>"gg?"}, "commit"=>"Create Ipcam type"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["type1", "gg?"], ["created_at", "2015-01-01 12:03:51.555304"], ["updated_at", "2015-01-01 12:03:51.555304"]]
+  [1m[35m (10.7ms)[0m  commit transaction
+Redirected to https://rails-tutorial-tsengturtle.c9.io/ipcams/2
+Completed 302 Found in 15ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/ipcams/2" for 220.136.226.253 at 2015-01-01 12:03:51 +0000
+Processing by IpcamsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIpcam Load (0.2ms)[0m  [1mSELECT  "ipcams".* FROM "ipcams" WHERE "ipcams"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered ipcams/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 149ms (Views: 147.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:51 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:51 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:03:51 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:51 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:03:51 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 12:06:09 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 146ms (Views: 144.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:06:09 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:06:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:06:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:06:10 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:06:10 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:06:10 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 12:06:12 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 139.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:06:12 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:06:12 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:06:12 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:06:12 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:06:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:06:12 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 12:06:22 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aAN0vm20nxlY+kBLwIrKPhct/WeVr+7OE7As9ftuOUjQjvwrwbcw64n6RMrFTNvBJUFqS/BHlmXlcoGhgxJTgA==", "ipcam"=>{"type1"=>"cdd"}, "commit"=>"Create Ipcam type"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["type1", "cdd"], ["created_at", "2015-01-01 12:06:22.754540"], ["updated_at", "2015-01-01 12:06:22.754540"]]
+  [1m[35m (12.4ms)[0m  commit transaction
+Redirected to https://rails-tutorial-tsengturtle.c9.io/ipcams/3
+Completed 302 Found in 17ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/ipcams/3" for 220.136.226.253 at 2015-01-01 12:06:22 +0000
+Processing by IpcamsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIpcam Load (0.2ms)[0m  [1mSELECT  "ipcams".* FROM "ipcams" WHERE "ipcams"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered ipcams/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 126.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:06:23 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:06:23 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:06:23 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:06:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:06:23 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:06:23 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 12:07:49 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 155ms (Views: 153.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:49 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:49 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:49 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:49 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:49 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 12:07:53 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UoLqZ9bgkSFohmXUj3nIy9P+3lDCl0wfB4EX7vILEWbqD2LyeuM+07mGYVWKv9k04ZJJfKd/NLTxQ7q6ind7rg==", "ipcam"=>{"type1"=>"0"}, "commit"=>"Create Ipcam type"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["type1", "0"], ["created_at", "2015-01-01 12:07:53.590960"], ["updated_at", "2015-01-01 12:07:53.590960"]]
+  [1m[35m (11.1ms)[0m  commit transaction
+Redirected to https://rails-tutorial-tsengturtle.c9.io/ipcams/4
+Completed 302 Found in 16ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/ipcams/4" for 220.136.226.253 at 2015-01-01 12:07:53 +0000
+Processing by IpcamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mIpcam Load (0.2ms)[0m  [1mSELECT  "ipcams".* FROM "ipcams" WHERE "ipcams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered ipcams/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 131.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:53 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:53 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:53 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:53 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:53 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 12:07:56 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 142ms (Views: 141.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:57 +0000
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:57 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:57 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:57 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:57 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 12:07:58 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Na1t/D71aTnp6jXzebykUErXbBOjKJ8i1pxZ3l+6BLiNIOVpkvbGyzjqMXJ8erWveLv7P8bA54kgXvSKJ8ZucA==", "ipcam"=>{"type1"=>"1"}, "commit"=>"Create Ipcam type"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["type1", "1"], ["created_at", "2015-01-01 12:07:58.848526"], ["updated_at", "2015-01-01 12:07:58.848526"]]
+  [1m[35m (10.3ms)[0m  commit transaction
+Redirected to https://rails-tutorial-tsengturtle.c9.io/ipcams/5
+Completed 302 Found in 15ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/ipcams/5" for 220.136.226.253 at 2015-01-01 12:07:58 +0000
+Processing by IpcamsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mIpcam Load (0.3ms)[0m  [1mSELECT  "ipcams".* FROM "ipcams" WHERE "ipcams"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered ipcams/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 128ms (Views: 125.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:59 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:59 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 12:07:59 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 12:07:59 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 13:21:52 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 159ms (Views: 150.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 13:21:52 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 13:21:52 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 13:21:52 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 13:21:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 13:21:52 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 13:21:52 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 13:21:55 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+itXzys+VbtCPwTzSwJx7hpwBNa41DdJJXCl059JSoFCpt9ahz36SZM/AHJOxGARKByT+t08T+LTsgiH5zUgSQ==", "ipcam"=>{"type1"=>"0"}, "commit"=>"Create Ipcam type"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["type1", "0"], ["created_at", "2015-01-01 13:21:55.438195"], ["updated_at", "2015-01-01 13:21:55.438195"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+Redirected to https://rails-tutorial-tsengturtle.c9.io/ipcams/6
+Completed 302 Found in 17ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/ipcams/6" for 220.136.226.253 at 2015-01-01 13:21:55 +0000
+Processing by IpcamsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mIpcam Load (0.3ms)[0m  [1mSELECT  "ipcams".* FROM "ipcams" WHERE "ipcams"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered ipcams/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 129.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 13:21:55 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 13:21:55 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 13:21:55 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 13:21:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 13:21:55 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 13:21:55 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 13:21:58 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 135ms (Views: 133.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 13:21:59 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 13:21:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 13:21:59 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 13:21:59 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 13:21:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 13:21:59 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 13:22:02 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XVj3wVbRBCa+ZxYNQopZutPH84B9zXPaKH8MSg753XLl1X9U+tKr1G9nEoxHTEhF4atkrBglC3HevaEedoW3ug==", "ipcam"=>{"type1"=>"1"}, "commit"=>"Create Ipcam type"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["type1", "1"], ["created_at", "2015-01-01 13:22:02.309841"], ["updated_at", "2015-01-01 13:22:02.309841"]]
+  [1m[35m (11.9ms)[0m  commit transaction
+Redirected to https://rails-tutorial-tsengturtle.c9.io/ipcams/7
+Completed 302 Found in 17ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/ipcams/7" for 220.136.226.253 at 2015-01-01 13:22:02 +0000
+Processing by IpcamsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mIpcam Load (0.2ms)[0m  [1mSELECT  "ipcams".* FROM "ipcams" WHERE "ipcams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered ipcams/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 125.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 13:22:02 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 13:22:02 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 13:22:02 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 13:22:02 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 13:22:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 13:22:02 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 13:22:04 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 143ms (Views: 141.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 13:22:04 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 13:22:04 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 13:22:04 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 13:22:04 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 13:22:04 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 13:22:04 +0000
+
+
+Started POST "/ipcams" for 220.136.226.253 at 2015-01-01 13:30:19 +0000
+Processing by IpcamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7omHJixhuEgz6SUjaBMNAY3YbtJp5qgOoaivtpduGQxWBA+zgGIXuuLpIaJt1Rz+v7T5/gwO0KVXagLi7xJzxA==", "ipcam"=>{"type1"=>"1"}, "commit"=>"Create Ipcam type"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ipcams" ("type1", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["type1", "1"], ["created_at", "2015-01-01 13:30:19.534156"], ["updated_at", "2015-01-01 13:30:19.534156"]]
+  [1m[35m (11.9ms)[0m  commit transaction
+Redirected to https://rails-tutorial-tsengturtle.c9.io/ipcams/8
+Completed 302 Found in 17ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/ipcams/8" for 220.136.226.253 at 2015-01-01 13:30:19 +0000
+Processing by IpcamsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mIpcam Load (0.3ms)[0m  [1mSELECT  "ipcams".* FROM "ipcams" WHERE "ipcams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered ipcams/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 141ms (Views: 139.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 13:30:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 13:30:19 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 13:30:19 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 13:30:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 13:30:19 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 13:30:19 +0000
+
+
+Started GET "/ipcams/new" for 220.136.226.253 at 2015-01-01 13:30:21 +0000
+Processing by IpcamsController#new as HTML
+  Rendered ipcams/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 136ms (Views: 135.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ipcams.css?body=1" for 220.136.226.253 at 2015-01-01 13:30:22 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 220.136.226.253 at 2015-01-01 13:30:22 +0000
+
+
+Started GET "/assets/application.css?body=1" for 220.136.226.253 at 2015-01-01 13:30:22 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 220.136.226.253 at 2015-01-01 13:30:22 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 220.136.226.253 at 2015-01-01 13:30:22 +0000
+
+
+Started GET "/assets/application.js?body=1" for 220.136.226.253 at 2015-01-01 13:30:22 +0000
+
+
+Started GET "/" for 118.160.173.140 at 2015-01-11 09:33:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 411ms (Views: 397.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 118.160.173.140 at 2015-01-11 09:33:57 +0000
+
+
+Started GET "/assets/ipcams.css?body=1" for 118.160.173.140 at 2015-01-11 09:33:57 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 118.160.173.140 at 2015-01-11 09:33:57 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 118.160.173.140 at 2015-01-11 09:33:57 +0000
+
+
+Started GET "/assets/application.css?body=1" for 118.160.173.140 at 2015-01-11 09:33:57 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 118.160.173.140 at 2015-01-11 09:33:57 +0000
+
+
+Started GET "/assets/ipcams.js?body=1" for 118.160.173.140 at 2015-01-11 09:33:57 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 118.160.173.140 at 2015-01-11 09:33:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 118.160.173.140 at 2015-01-11 09:33:58 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 118.160.173.140 at 2015-01-11 09:33:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAaas (20150111102738)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAaas (20150111103359)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAaas (20150111125409)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "aaas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150111125409"]]
+  [1m[36m (20.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAaas (20150111130004)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "aaas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+SQLite3::SQLException: table "aaas" already exists: CREATE TABLE "aaas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCars (20150111130104)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150111130104"]]
+  [1m[36m (75.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("bmw", "created_at", "updated_at") VALUES (?, ?, ?)  [["bmw", "[]"], ["created_at", "2015-01-11 13:09:01.180628"], ["updated_at", "2015-01-11 13:09:01.180628"]]
+  [1m[36m (22.5ms)[0m  [1mcommit transaction[0m
+  [1m[36m (12.6ms)[0m  [1mCREATE TABLE "aaas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (39.5ms)[0m  CREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (12.8ms)[0m  [1mCREATE TABLE "ipcams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type1" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (94.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (41.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150111130104')
+  [1m[36m (39.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150101103338')[0m
+  [1m[35m (10.7ms)[0m  CREATE TABLE "aaas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (36.6ms)[0m  [1mCREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (10.3ms)[0m  CREATE TABLE "ipcams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type1" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (40.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (10.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150111130104')[0m
+  [1m[35m (44.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150101103338')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("bmw", "created_at", "updated_at") VALUES (?, ?, ?)  [["bmw", "[]"], ["created_at", "2015-01-11 13:11:08.579893"], ["updated_at", "2015-01-11 13:11:08.579893"]]
+  [1m[36m (17.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("bmw", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["bmw", "[]"], ["created_at", "2015-01-11 13:17:34.168518"], ["updated_at", "2015-01-11 13:17:34.168518"]]
+  [1m[35m (12.3ms)[0m  commit transaction
+  [1m[36m (11.5ms)[0m  [1mCREATE TABLE "aaas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (10.9ms)[0m  CREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (12.7ms)[0m  [1mCREATE TABLE "ipcams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type1" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (17.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (125.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150111130104')
+  [1m[36m (8.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150101103338')[0m
+  [1m[35m (12.0ms)[0m  CREATE TABLE "aaas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (8.8ms)[0m  [1mCREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bmw" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (10.8ms)[0m  CREATE TABLE "ipcams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type1" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (11.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (11.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (10.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150111130104')[0m
+  [1m[35m (9.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150101103338')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

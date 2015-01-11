@@ -1,0 +1,2 @@
+module IpcamsHelper
+end
