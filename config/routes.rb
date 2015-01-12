@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  get 'ipcams/new'
-  resources :ipcams
+  get 'cameratype' =>'vivocameras/new'
+  
+  resources :vivocameras
+  resources :userinputs
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

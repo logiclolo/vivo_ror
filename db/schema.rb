@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150111130104) do
+ActiveRecord::Schema.define(version: 20150112083743) do
 
   create_table "aaas", force: :cascade do |t|
     t.string   "bmw"
@@ -27,6 +27,21 @@ ActiveRecord::Schema.define(version: 20150111130104) do
 
   create_table "ipcams", force: :cascade do |t|
     t.string   "type1"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "userinputs", force: :cascade do |t|
+    t.string   "property"
+    t.integer  "vivocamera_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "userinputs", ["vivocamera_id"], name: "index_userinputs_on_vivocamera_id"
+
+  create_table "vivocameras", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

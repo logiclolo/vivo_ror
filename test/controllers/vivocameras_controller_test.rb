@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class IpcamTest < ActiveSupport::TestCase
+class VivocamerasControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

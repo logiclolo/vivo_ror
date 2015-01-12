@@ -1,0 +1,2 @@
+module VivocamerasHelper
+end

@@ -1,0 +1,6 @@
+   <%= form_for(@vivocamera) do |f| %>
+      <%= f.label :name ,"IP camera name" %>
+      <%= f.text_field :name %>
+
+      <%= f.submit "Create an IP camera name", class: "btn btn-primary" %>
+    <% end %>
