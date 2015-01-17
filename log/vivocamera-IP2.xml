@@ -1,0 +1,11 @@
+<root>
+        <capability>
+                <api>
+                        <httpversion>0300a</httpversion>
+                </api>
+                <bootuptime>2</bootuptime>
+                <ir>2</ir>
+                <extir>2</extir>
+                <npir>2</npir>
+                <ndi>2</ndi>
+                <nvi>2</nvi>

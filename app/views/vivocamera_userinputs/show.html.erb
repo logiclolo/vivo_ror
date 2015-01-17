@@ -1,0 +1,17 @@
+ <% @userinputs.each do |userinput| %>
+ IPcamera name:<%= userinput.vivocamera.name %><br />
+< root ><br />
+< capability ><br />
+               < api ><br />
+       < httpversion >0300a< httpversion ><br />
+              < /api ><br />
+        < bootuptime ><%= userinput.bootuptim %>< /bootuptime ><br />
+                < ir ><%= userinput.ir %>< /ir ><br />
+             < extir ><%= userinput.extir %>< /extir ><br />
+              < npir ><%= userinput.npir %>< /npir > <br />
+               < ndi ><%= userinput.ndi %>< /ndi ><br />
+               < nvi ><%= userinput.nvi %>< /nvi ><br />
+
+<%= link_to 'edit camera property', vivocamera_userinputs_edit_path(@vivocamera, @userinputs, :vivocamera_id => @vivocamera.id)    %>
+
+<% end %>

@@ -1,9 +1,13 @@
+List of all Vivotek cameras:
+ 
 <ul>
 <% @vivocameras.each do |vivocamera| %>
-  <li>
- 	 
- 	 晶睿攝影機名稱: <%= vivocamera.name %>
-  
-  </li>
+	<li>
+	 Vivo IPcamera name: <%= vivocamera.name %>
+	  <%= link_to 'show', :controller => :vivocamera_userinputs, :action => :show ,:vivocamera_id => vivocamera.id   %>
+	  <%= link_to 'edit camera name', :controller => :vivocameras, :action => :edit , :vivocamera_id => vivocamera.id  %>
+	 
+	</li>
 <% end %>
-</ul>
+
+  

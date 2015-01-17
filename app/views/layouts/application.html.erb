@@ -13,20 +13,27 @@
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
       
-      <div id="sub">
-      <h1>CheckBox List:</h1>
-        
-    
-     
-    </div>
+    <div class="container">
+       <div id="sub">
+         
+         <div class="input_camera">
+         <h1>Create IP camera:</h1>
+         <%= link_to "Create an IP camera", inputcamera_path, class: "btn btn-primary" %>
+           
+         </div>
+         
+         <div class="input_camera">
+           <h1> List of all Vivotek cameras:</h1>
+         <%= link_to "Show all IP cameras", cameraindex_path, class: "btn btn-primary" %>
+          </div>
+         
+         
+       </div>
   
-    <div class="main">
-      <%= yield %>
-
-     
-      
-    </div>
+       <div id="main">
+         <%= yield %>
+       </div>
     
-    
+    </div>  
 </body>
 </html>

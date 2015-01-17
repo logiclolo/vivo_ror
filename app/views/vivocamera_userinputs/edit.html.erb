@@ -1,0 +1,24 @@
+<%= form_for @userinput , :url => userinputs_update_path(@vivocamera, @userinput,:vivocamera_id => @vivocamera.id) do |f| %>
+  
+  <br>
+    <%= f.label :bootuptim, "bootuptim" %>
+    <%= f.text_field :bootuptim %>
+<br>
+     <%= f.label :ir, "ir" %>
+    <%= f.text_field :ir %>
+  <br>  
+     <%= f.label :extir, "extir" %>
+    <%= f.text_field :extir %>
+   <br> 
+     <%= f.label :npir, "npir" %>
+    <%= f.text_field :npir %>
+   <br> 
+     <%= f.label :ndi, "ndi" %>
+    <%= f.text_field :ndi %>
+  <br>
+    <%= f.label :nvi, "nvi" %>
+    <%= f.text_field :nvi %>
+  <br>
+    <%= f.submit "Save", class: "btn btn-primary" %>
+    <br>
+<% end %>

@@ -7,6 +7,7 @@ class VivocamerasController < ApplicationController
 
  def new
    @vivocamera=Vivocamera.new
+   @vivocameras=Vivocamera.all
  end
 
  def index
@@ -18,12 +19,25 @@ class VivocamerasController < ApplicationController
     @vivocamera = Vivocamera.new(vivocamera_params)
      @vivocamera.save
       flash[:success] = "IP camera successful created!"
-       redirect_to :action => :show
+       
+       
+     redirect_to :controller => :vivocamera_userinputs, :action => :new, :vivocamera_id => @vivocamera.id
   
   end
 
- 
+ def edit
+   @vivocamera = Vivocamera.find(params[:vivocamera_id])
+ end
 
+ def update
+   @vivocamera = Vivocamera.find(params[:id])
+   
+   @vivocamera.update_attributes(vivocamera_params)
+      flash[:success] = "IPcamera name updated!"
+      redirect_to cameraindex_path
+   
+ end
+  
 
   private
 
@@ -31,6 +45,6 @@ class VivocamerasController < ApplicationController
       params.require(:vivocamera).permit(:name)
     end
 
-
+  
 
 end

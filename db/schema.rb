@@ -11,34 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150112083743) do
+ActiveRecord::Schema.define(version: 20150116023339) do
 
-  create_table "aaas", force: :cascade do |t|
-    t.string   "bmw"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "cars", force: :cascade do |t|
-    t.string   "bmw"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ipcams", force: :cascade do |t|
-    t.string   "type1"
+  create_table "internals", force: :cascade do |t|
+    t.string   "name"
+    t.string   "prop"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "userinputs", force: :cascade do |t|
-    t.string   "property"
-    t.integer  "vivocamera_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "bootuptim"
+    t.string   "ir"
+    t.string   "extir"
+    t.string   "npir"
+    t.string   "ndi"
+    t.string   "nvi"
+    t.integer  "vivocamera_id"
   end
-
-  add_index "userinputs", ["vivocamera_id"], name: "index_userinputs_on_vivocamera_id"
 
   create_table "vivocameras", force: :cascade do |t|
     t.string   "name"

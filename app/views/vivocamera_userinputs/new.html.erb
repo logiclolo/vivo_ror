@@ -1,0 +1,26 @@
+
+IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
+<hr />
+<%= form_for @userinput, :url => vivocamera_userinputs_path(@vivocamera)   do |f|  %>
+
+    <%= f.label :bootuptim, "bootuptim" %>
+    <%= f.text_field :bootuptim %>
+<br>
+     <%= f.label :ir, "ir" %>
+    <%= f.text_field :ir %>
+  <br>  
+     <%= f.label :extir, "extir" %>
+    <%= f.text_field :extir %>
+   <br> 
+     <%= f.label :npir, "npir" %>
+    <%= f.text_field :npir %>
+   <br> 
+     <%= f.label :ndi, "ndi" %>
+    <%= f.text_field :ndi %>
+  <br>
+    <%= f.label :nvi, "nvi" %>
+    <%= f.text_field :nvi %>
+  <br>
+    <%= f.submit "Create" %>
+    <br>
+<% end  %>

@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  get 'cameratype' =>'vivocameras/new'
+  get 'vivocameras/new'
+  get 'vivocameras/show'
+  get 'vivocameras/edit'
+  get 'vivocamera_userinputs/new'
+  get 'vivocamera_userinputs/show'
+  get 'vivocamera_userinputs/edit'
+  patch 'vivocamera_userinputs/update'
   
-  resources :vivocameras
-  resources :userinputs
+  get 'inputcamera' =>'vivocameras#new'
+  get 'cameraindex' =>'vivocameras#index'
+  get 'userinputs' =>'vivocamera_userinputs#new'
+  patch 'userinputs_update' => 'vivocamera_userinputs#update'
+  
+  resources :vivocameras do
+    resources :userinputs, :controller => 'vivocamera_userinputs'
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

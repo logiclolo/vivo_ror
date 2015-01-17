@@ -1,0 +1,37 @@
+<ul>
+ 
+
+   <%  File.open("./log/internalinput.xml", "r").each_line do |line|  internaldata = line   %>
+
+ <%=   internaldata %>
+ 
+  <% end   %>
+ 
+  
+  
+  
+</ul>
+
+ 
+
+
+
+<% @userinputs.each do |userinput| %>
+<% filename= "vivocamera-"+userinput.vivocamera.name  %>
+<% my_file = File.new("./log/"+filename+".xml","w")  %>
+<% my_file.write "<root>"+ "\n" %>
+<% my_file.write "        <capability>"+ "\n" %>
+<% my_file.write "                <api>"+ "\n" %>
+<% my_file.write "                        <httpversion>0300a</httpversion>"+ "\n" %>
+<% my_file.write "                </api>"+ "\n" %>
+<% my_file.write "                <bootuptime>"+userinput.bootuptim+"</bootuptime>"+ "\n" %>
+<% my_file.write "                <ir>"+userinput.ir+"</ir>"+ "\n" %>
+<% my_file.write "                <extir>"+userinput.extir+"</extir>"+ "\n" %>
+<% my_file.write "                <npir>"+userinput.npir+"</npir>"+ "\n" %>
+<% my_file.write "                <ndi>"+userinput.ndi+"</ndi>"+ "\n" %>
+<% my_file.write "                <nvi>"+userinput.nvi+"</nvi>"+ "\n" %>
+
+
+<% my_file.close %>
+
+<% end %>
