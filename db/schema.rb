@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116023339) do
+ActiveRecord::Schema.define(version: 20150319150051) do
 
   create_table "internals", force: :cascade do |t|
     t.string   "name"
@@ -21,15 +21,64 @@ ActiveRecord::Schema.define(version: 20150116023339) do
   end
 
   create_table "userinputs", force: :cascade do |t|
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.string   "bootuptim"
-    t.string   "ir"
-    t.string   "extir"
-    t.string   "npir"
-    t.string   "ndi"
-    t.string   "nvi"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.integer  "vivocamera_id"
+    t.string   "api_httpversion"
+    t.integer  "bootuptime"
+    t.integer  "npir"
+    t.integer  "ndi"
+    t.integer  "nvi"
+    t.integer  "ndo"
+    t.integer  "naudioin"
+    t.integer  "naudioout"
+    t.integer  "nvideoin"
+    t.integer  "nvideoout"
+    t.integer  "nmediastream"
+    t.integer  "nuart"
+    t.integer  "nvideoinprofile"
+    t.integer  "nmotion"
+    t.integer  "nmotionprofile"
+    t.integer  "ptzenabled"
+    t.integer  "windowless"
+    t.integer  "evctrlchannel"
+    t.integer  "joystick"
+    t.integer  "npreset"
+    t.integer  "eptz"
+    t.integer  "nanystream"
+    t.integer  "iva"
+    t.integer  "whitelight"
+    t.integer  "iris"
+    t.integer  "tampering"
+    t.integer  "adaptiverecording"
+    t.integer  "adaptivestreaming"
+    t.integer  "supportsd"
+    t.integer  "fisheye"
+    t.string   "supporttriggertypes"
+    t.integer  "daynight_support"
+    t.integer  "daynight_builtinir"
+    t.integer  "daynight_externalir"
+    t.integer  "daynight_smartir"
+    t.integer  "daynight_ircutfilter"
+    t.integer  "daynight_lightsensor"
+    t.string   "sensortype"
+    t.string   "iristype"
+    t.integer  "dnr"
+    t.integer  "flickerless"
+    t.integer  "eis"
+    t.integer  "aespeed"
+    t.integer  "defog"
+    t.integer  "scenemode"
+    t.integer  "wdrpro"
+    t.integer  "wdrc"
+    t.integer  "remotefocus"
+    t.integer  "backfocus"
+    t.integer  "focusassist"
+  end
+
+  create_table "userinputsdfs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "vivocameras", force: :cascade do |t|

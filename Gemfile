@@ -5,10 +5,13 @@ gem 'bootstrap-sass',       '3.2.0.0'
 gem 'sass-rails',           '5.0.0.beta1'
 gem 'uglifier',             '2.5.3'
 gem 'coffee-rails',         '4.1.0'
-gem 'jquery-rails',         '4.0.0.beta2'
 gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
+gem "tabs_on_rails"
+gem 'tabulous', '~> 2.1.3'
+gem 'jquery-rails', '~> 4.0.3' 
+gem 'jquery-ui-rails', '~> 4.2.1'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

@@ -1,0 +1,63 @@
+.tablescroll
+{ font: 12px normal Arial, sans-serif; background-color:#fff; }
+
+.tablescroll td,
+.tablescroll_wrapper,
+.tablescroll_head,
+.tablescroll_foot
+{ border:1px solid #ccc; }
+
+.tablescroll td
+{ padding:3px 5px; }
+
+.tablescroll_head
+{ font-size:12px; font-weight:bold; background-color:#eee; margin-bottom:1px; }
+
+.tablescroll_head tr
+{font-size: 12px; height: 25px;}
+
+.tablescroll_head th + th
+{ text-align: left; } 
+
+.tablescroll thead td
+{ border-right:0; border-bottom:0; }
+
+.tablescroll tbody td
+{ border-right:0; border-bottom:0; border-top:0; border-left:0; }
+
+.tablescroll tbody tr.first td
+{ border-top:0; }
+
+.tablescroll tbody tr td
+{ text-align: left; vertical-align: middle; border-bottom: 1px solid #ddd; padding-left: 1px; }
+
+.tablescroll tbody tr td + td
+{ text-align: left; vertical-align: middle; height: 25px; overflow: hidden; text-overflow: ellipsis; white-space:nowrap;}
+
+/*.tablescroll-patrol tbody tr td + td*/
+/*{ overflow: hidden; text-overflow: ellipsis; white-space:nowrap;}*/
+
+.tablescroll tbody tr td + td + td
+{ text-align: right; padding-right: 2px;}
+
+.tablescroll tr th
+{ width: 1px; text-align: left;}
+
+.tablescroll tr th + th
+{ width: 180px; }
+
+.tablescroll tr th + th + th
+{ width: 85px; text-align:right; }
+
+
+.tablescroll_foot
+{ font-weight:bold; background-color:#eee; margin-top:1px; }
+
+.tablescroll tfoot td
+{ border-right:0; border-bottom:0; }
+
+/* for table dnd */
+tr.myDragClass td {
+    background-color: #C4EAFF;
+}
+

@@ -1,26 +1,432 @@
 
 IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 <hr />
-<%= form_for @userinput, :url => vivocamera_userinputs_path(@vivocamera)   do |f|  %>
 
+<%= form_for @userinput, :url => vivocamera_userinputs_path(@vivocamera)   do |f|  %>
+<div id="tabs">
+    <ul>
+      <li><a href="#tabs-0">common</a></li>
+      <li><a href="#tabs-1">daynight</a></li>
+      <li><a href="#tabs-2">video</a></li>
+      <li><a href="#tabs-3">audio</a></li>
+      <li><a href="#tabs-4">image</a></li>
+      <li><a href="#tabs-5">smart stream</a></li>
+      <li><a href="#tabs-6">videoout</a></li>
+      <li><a href="#tabs-7">vadp</a></li>
+      <li><a href="#tabs-8">thermal</a></li>
+      <li><a href="#tabs-9">motion</a></li>
+      <li><a href="#tabs-10">media</a></li>
+      <li><a href="#tabs-11">localstorage</a></li>
+      <li><a href="#tabs-12">version</a></li>
+      <li><a href="#tabs-13">protocol</a></li>
+      <li><a href="#tabs-14">network</a></li>
+      <li><a href="#tabs-15">wireless</a></li>
+      <li><a href="#tabs-16">remotecamctrl</a></li>
+      <li><a href="#tabs-17">uart</a></li>
+      <li><a href="#tabs-18">transmission</a></li>
+      <li><a href="#tabs-19">storage</a></li>
+      <li><a href="#tabs-20">derivative</a></li>
+      <li><a href="#tabs-21">image</a></li>
+      <li><a href="#tabs-22">test</a></li>
+    </ul>
+    
+    <div id="tabs-0">
     <%= f.label :bootuptim, "bootuptim" %>
-    <%= f.text_field :bootuptim %>
-<br>
-     <%= f.label :ir, "ir" %>
-    <%= f.text_field :ir %>
-  <br>  
-     <%= f.label :extir, "extir" %>
-    <%= f.text_field :extir %>
-   <br> 
-     <%= f.label :npir, "npir" %>
-    <%= f.text_field :npir %>
-   <br> 
-     <%= f.label :ndi, "ndi" %>
-    <%= f.text_field :ndi %>
-  <br>
+    <%= f.text_field :bootuptim, value:'60' %>
+    <br>
+    <%= f.label :npir, "npir" %>
+    <%= f.text_field :npir, value:'1' %>
+    <br> 
+    <%= f.label :ndi, "ndi" %>
+    <%= f.text_field :ndi, value:'1', class: "params" %> 
+    <br>    
     <%= f.label :nvi, "nvi" %>
-    <%= f.text_field :nvi %>
-  <br>
+    <%= f.text_field :nvi, value:'1', class: "params" %>
+    <br>
+    <%= f.label :ndo, "ndo" %>
+    <%= f.text_field :ndo, value:'1', class: "params" %>
+    <br>
+    <%= f.label :naudioin, "naudioin" %>
+    <%= f.text_field :naudioin, value:'1', class: "params" %>
+    <br>
+    <%= f.label :naudioout, "naudioout" %>
+    <%= f.text_field :naudioout, value:'1', class: "params" %>
+    <br>
+    <%= f.label :nvideoin, "nvideoin" %>
+    <%= f.text_field :nvideoin, value:'1' %>
+    <br>
+    <%= f.label :nvideoout, "nvideoout" %>
+    <%= f.text_field :nvideoout, value:'1' %>
+    <br>
+    <%= f.label :nmediastream, "nmediastream" %>
+    <%= f.text_field :nmediastream, value:'1', class: "params" %>
+    <br>   
+    <%= f.label :nuart, "nuart" %>
+    <%= f.text_field :nuart, value:'1' %>
+    <br>     
+    <%= f.label :nvideoinprofile, "nvideoinprofile" %>
+    <%= f.text_field :nvideoinprofile, value:'1' %>
+    <br>    
+    <%= f.label :nmotion, "nmotion" %>
+    <%= f.text_field :nmotion, value:'1' %>
+    <br>    
+    <%= f.label :nmotionprofile, "nmotionprofile" %>
+    <%= f.text_field :nmotionprofile, value:'1' %>
+    <br> 
+    <%= f.label :ptzenabled, "ptzenabled" %>
+    <%= f.text_field :ptzenabled, value:'1' %>
+    <br> 
+    <%= f.label :windowless, "windowless" %>
+    <%= f.text_field :windowless, value:'1' %>
+    <br>     
+    <%= f.label :evctrlchannel, "evctrlchannel" %>
+    <%= f.text_field :evctrlchannel, value:'1' %>
+    <br>  
+    <%= f.label :joystick, "joystick" %>
+    <%= f.text_field :joystick, value:'1' %>
+    <br>      
+    <%= f.label :npreset, "npreset" %>
+    <%= f.text_field :npreset, value:'1' %>
+    <br>     
+    <%= f.label :eptz, "eptz" %>
+    <%= f.text_field :eptz, value:'1' %>
+    <br>        
+    <%= f.label :nanystream, "nanystream" %>
+    <%= f.text_field :nanystream, value:'1' %>
+    <br>     
+    <%= f.label :iva, "iva" %>
+    <%= f.text_field :iva, value:'1' %>
+    <br>     
+    <%= f.label :whitelight, "whitelight" %>
+    <%= f.text_field :whitelight, value:'1' %>
+    <br>      
+    <%= f.label :iris, "iris" %>
+    <%= f.text_field :iris, value:'1' %>
+    <br>    
+    <%= f.label :tampering, "tampering" %>
+    <%= f.text_field :tampering, value:'1' %>
+    <br>      
+    <%= f.label :adaptiverecording, "adaptiverecording" %>
+    <%= f.text_field :adaptiverecording, value:'1' %>
+    <br>    
+    <%= f.label :adaptivestreaming, "adaptivestreaming" %>
+    <%= f.text_field :adaptivestreaming, value:'1' %>
+    <br>        
+    <%= f.label :supportsd, "supportsd" %>
+    <%= f.text_field :supportsd, value:'1' %>
+    <br>        
+    <%= f.label :fisheye, "fisheye" %>
+    <%= f.text_field :fisheye, value:'1' %>
+    <br>   
+    <%= f.label :nvi, "supporttriggertypes" %>
+    <br>
+    <%= f.check_box :nvi, :checked => true %>seq
+    <%= f.check_box :nvi, :checked => true %>boot
+    <%= f.check_box :nvi, :checked => true %>motion
+    <%= f.check_box :nvi, :checked => true %>networkfail
+    <%= f.check_box :nvi, :checked => true %>recnotify
+    <%= f.check_box :nvi, :checked => true %>tampering
+    <%= f.check_box :nvi, :checked => true %>vi
+    <%= f.check_box :nvi, :checked => true %>vadp
+    <%= f.check_box :nvi, :checked => true %>di
+    <%= f.check_box :nvi, :checked => true %>volalarm
+    <%= f.check_box :nvi, :checked => true %>temperature
+    <%= f.check_box :nvi, :checked => true %>pir
+    <br>   
+    </div>
+
+    <div id="tabs-1">
+    <%= f.label :ir, "daynight_support" %>
+    <%= f.text_field :ir, value:'1' %>
+    <br>
+    <%= f.label :ir, "daynight_builtinir" %>
+    <%= f.text_field :ir, value:'1' %>
+    <br>
+    <%= f.label :ir, "daynight_externalir" %>
+    <%= f.text_field :ir, value:'1' %>
+    <br>
+    <%= f.label :ir, "daynight_smartir" %>
+    <%= f.text_field :ir, value:'1' %>
+    <br>    
+    <%= f.label :ir, "daynight_ircutfilter" %>
+    <%= f.text_field :ir, value:'1' %>
+    <br>
+    <%= f.label :ir, "daynight_lightsensor" %>
+    <%= f.text_field :ir, value:'1' %>
+    <br>
+    </div>
+    
+    <div id="tabs-2">
+    
+    <%= f.label :support_codec, "Support Codec " %>
+    <%= f.check_box :h265, class: "codec", :checked => true %>H265
+    <%= f.check_box :h264, class: "codec", :checked => false %>H264
+    <%= f.check_box :mjpeg, class: "codec", :checked => false %>MJPEG
+    <br>
+    <br>
+    <%= f.label :resolution_fps, "Resolution and MaxFPS " %>
+    <br>
+    
+                    <table style="margin-left:0px">
+											<tr>
+												<td>
+													<div class="tablescroll">
+														<table cellspacing="0" class="tablescroll_head" style="width: 222px;">
+															<thead>
+																<tr>
+																	<th style="_width: 210px;"><span>Resolution</span></th>
+																</tr>
+															</thead>
+														</table>
+														<div class="tablescroll_wrapper" style="width: 222px; height: 130px; overflow-x: hidden; overflow-y: auto;">
+															<table cellspacing="0" style="table-layout: fixed; width: 220px;" id="table-preset" class="tablescroll_body">
+																<colgroup>
+																	<col width="20"/>
+																	<col width="150"/>
+																</colgroup>
+																<tbody>
+																	<!-- Preset Locations Content -->
+																	<tr>
+																	  <td>
+																	    <input type="checkbox"/>
+																	  </td>
+																	  <td title="176x144" style="cursor: default;">
+																      176x144
+																    </td>
+																  </tr>
+																  <tr>
+																	  <td>
+																	    <input type="checkbox"/>
+																	  </td>
+																	  <td title="800x600" style="cursor: default;">
+																      800x600
+																    </td>
+																  </tr>
+																</tbody>
+															</table>
+														</div>
+														<table cellspacing="0" class="tablescroll_foot" style="width: 222px;">
+															<tfoot>
+																<tr>
+																	<th style="_width: 10px;"><input type="button" title="symbol" value="New" onclick="newResolution()"></th>
+																	<th style="_width: 210px;"><input type="button" title="symbol" value="more" style="float:right; display:none;" id="btn_adjPresetTbl" onclick="adjustPresetTbl(this)"/></th>
+																</tr>
+															</tfoot>
+														</table>
+													</div>
+												</td>
+												<td style="vertical-align: middle; width: 1px; padding: 0px 3px 0 3px;">
+													<input type="button" value=">>" style="padding: 1px; font: bold 11px arial;" onclick="pushResolution()"/>
+												</td>
+												<td>
+													<div class="tablescroll tablescroll-patrol">
+														  <table id="res_tablescroll_head" cellspacing="0" class="tablescroll_head" style="width:240px;table-layout:fixed">
+															<thead>
+															  <tr id="tablescroll_tr">
+																  <th style="width: 170px;"><span title="symbol">Resolution</span></th>
+																  <th style="width: 70px;"><span title="symbol">Max FPS</span></th>
+																  <!-- <th style="width: 70px;"><span title="symbol">Max FPS (under H264)</span></th>-->
+															  </tr>
+															</thead>
+														  </table>
+														  
+															<div id="res_tablescroll_body" class="tablescroll_wrapper" style="width:240px;height: 130px; overflow-x: hidden; overflow-y: auto;">
+															  <table cellspacing="0" style="table-layout: fixed; width: 240px;table-layout:fixed" id="table-patrol" class="tablescroll_body">
+																<colgroup id="colgroup">
+																  <col width="20"/>
+																	<col width="150"/>
+																	<col width="70"/>
+																
+																</colgroup>
+																<tbody id="tbody">
+																	<!-- Patrol Locations Content -->
+																
+																</tbody>
+                                </table>
+													    </div>
+													    
+															<table id="res_tablescroll_foot" cellspacing="0" class="tablescroll_foot" style="width:240px;" id="tblPatrolFootForIE6">
+															<tfoot>
+																<tr>
+																	<th style="_width: 20px;"><input type="button" title="symbol" value="remove" onclick="popResolution()"/></th>
+																	<th style="text-align: left; _width: 150px;">
+																		<input type="button" value="&#9650;" style="padding: 0 3px;" onclick="MoveUp()"/>
+																		<input type="button" value="&#9660;" style="padding: 0 3px;" onclick="MoveDown()"/>
+																	</th>
+																	<th><input type="button" title="symbol" value="more" style="display:none;" id="btn_adjPatrolTbl" onclick="adjustPatrolTbl(this)"/></th>
+																</tr>
+															</tfoot>
+														  </table>
+													</div>
+												</td>
+											</tr>
+											<tr>
+											  <td>
+											    <div id="new_resolution_content" class="special_area" style="display:none">
+                            <span title="symbol" id="presetNameID">resolution</span>:
+											      <!--<label for="addPresetInput" class="pre overlay" style=""><span title="symbol">add_preset_location</span></label>-->
+												    <input type="text" id="new_resolution_input" name="addpos_temp" maxlength="40" value="" style="width:100px;" onKeyPress="return KeyPress(event);"/>
+												    <input type="button" title="symbol" value="add" onclick="addResolution();"/>
+												  </div>
+											  </td>
+											</tr>
+										</table>
+      
+    </div>
+    
+    <% if false %>
+    <div id="tabs-2">
+      <%= f.label :nresolution, "nresolution" %>
+      <%= f.text_field :nresolution, value:'7', class: "params" %>
+      <br>
+      <%= f.label :resolution, "resolution" %>
+      <%= f.check_box :resolution1, :checked => true %>176x144
+      <%= f.check_box :resolution2, :checked => true %>320x240
+      <%= f.check_box :resolution3, :checked => true %>640x480
+      <%= f.check_box :resolution4, :checked => true %>800x600
+      <%= f.check_box :resolution5, :checked => true %>1280x960
+      <%= f.check_box :resolution6, :checked => true %>1600x1200
+      <%= f.check_box :resolution7, :checked => true %>2048x1536
+      <br>
+      <%= f.label :nmode, "nmode" %>
+      <%= f.text_field :nmode, value:'3', class: "params" %>
+      <br>
+      <div id="videomode0" class="list-head">
+        <%= f.label :nmode, "Video Mode 1:", class: "list-content-label" %>
+        <br>
+        <dl>
+          <div id="videomode0_stream0">
+            <dt>Stream 1 (Default Setting)</dt>
+            <%= f.label :resolution, "resolution" %>
+            <%= f.text_field :resolution, value:'2048x1536' %>
+            <br>
+            <%= f.label :resolution, "resolution" %>
+            <%= f.text_field :resolution, value:'2048x1536' %>
+            <br>
+            <%= f.label :resolution, "resolution" %>
+            <%= f.text_field :resolution, value:'2048x1536' %>
+            <br>
+            <%= f.label :resolution, "resolution" %>
+            <%= f.text_field :resolution, value:'2048x1536' %>
+            <br>
+          </div>
+        </dl>
+      </div>
+      <div id="videomode1" class="list-head">
+        <%= f.label :nmode, "Video Mode 2:", class: "list-content-label" %>
+        <br>
+        <dl>
+        <%= f.label :resolution, "resolution" %>
+        <%= f.check_box :resolution1, :checked => true %>176x144
+        <%= f.check_box :resolution2, :checked => true %>320x240
+        <%= f.check_box :resolution3, :checked => true %>640x480
+        <%= f.check_box :resolution4, :checked => true %>800x600
+        <%= f.check_box :resolution5, :checked => true %>1280x960
+        <%= f.check_box :resolution6, :checked => true %>1600x1200
+        <%= f.check_box :resolution7, :checked => true %>2048x1536
+      </div>
+      <div id="videomode2" class="list-head">
+        <%= f.label :nmode, "Video Mode 3:", class: "list-content-label" %>
+        <br>
+        <dl>
+        <%= f.label :resolution, "resolution" %>
+        <%= f.check_box :resolution1, :checked => true %>176x144
+        <%= f.check_box :resolution2, :checked => true %>320x240
+        <%= f.check_box :resolution3, :checked => true %>640x480
+        <%= f.check_box :resolution4, :checked => true %>800x600
+        <%= f.check_box :resolution5, :checked => true %>1280x960
+        <%= f.check_box :resolution6, :checked => true %>1600x1200
+        <%= f.check_box :resolution7, :checked => true %>2048x1536
+      </div>
+      
+    </div>
+    <% end %>
+    
+    
+    <div id="tabs-4">
+      <%= f.label :sensortype, "sensor 型號" %>
+      <%= f.radio_button :sensortype, 'imx123' ,:checked => true %> imx123
+      <%= f.radio_button :sensortype, 'imx103' %> imx103
+      <%= f.radio_button :sensortype, 'ov5658' %> ov5658
+      <br>
+      <%= f.label :iristype, "Iris 類型" %>
+      <%= f.radio_button :iristype, 'fixed' ,:checked => true%> fixed iris
+      <%= f.radio_button :iristype, 'dc' %> dc-iris
+      <%= f.radio_button :iristype, 'p' %> p-iris
+      <br>
+      <div id="flickerless" style="display:none">
+        <%= f.label :flickerless, "有無flickerless" %>
+        <%= f.radio_button :flickerless, 1 ,:checked => true%> 有
+        <%= f.radio_button :flickerless, 0 %> 無
+      </div>
+      <%= f.label :dnr, "有無dnr" %>
+      <%= f.radio_button :dnr, 1 ,:checked => true%> 有
+      <%= f.radio_button :dnr, 0 %> 無
+      <br>
+      <%= f.label :eis, "有無eis" %>
+      <%= f.radio_button :eis, 1 ,:checked => true%> 有
+      <%= f.radio_button :eis, 0 %> 無
+      <br>
+      <%= f.label :aespeed, "有無aespeed" %>
+      <%= f.radio_button :aespeed, 1 ,:checked => true%> 有
+      <%= f.radio_button :aespeed, 0 %> 無
+      <br>
+      <%= f.label :defog, "有無defog" %>
+      <%= f.radio_button :defog, 1 ,:checked => true%> 有
+      <%= f.radio_button :defog, 0 %> 無
+      <br>
+      <%= f.label :scenemode, "有無scenemode" %>
+      <%= f.radio_button :scenemode, 1 ,:checked => true%> 有
+      <%= f.radio_button :scenemode, 0 %> 無
+      <br>
+      <%= f.label :wdrpro, "有無wdr pro" %>
+      <%= f.radio_button :wdrpro, 1 ,:checked => true%> 有
+      <%= f.radio_button :wdrpro, 0 %> 無
+      <br>    
+      <%= f.label :wdrc, "有無wdr enhance" %>
+      <%= f.radio_button :wdrc, 1 ,:checked => true%> 有
+      <%= f.radio_button :wdrc, 0 %> 無
+      <br> 
+      <%= f.label :remotefocus, "有無remotefocus" %>
+      <%= f.radio_button :remotefocus, 1 ,:checked => true%> 有
+      <%= f.radio_button :remotefocus, 0 %> 無
+      <br>
+      <%= f.label :backfocus, "有無backfocus" %>
+      <%= f.radio_button :backfocus, 1 ,:checked => true%> 有
+      <%= f.radio_button :backfocus, 0 %> 無
+      <br>
+      <%= f.label :focusassist, "有無focusassist" %>
+      <%= f.radio_button :focusassist, 1 ,:checked => true%> 有
+      <%= f.radio_button :focusassist, 0 %> 無
+      <br>  
+    </div> 
+    
+    <div id="tabs-5">
+      <%= f.label :tampering, "有無smartstream" %>
+      <%= f.radio_button :tampering, 'tampering' ,:checked => true%> 有
+      <%= f.radio_button :tampering, 'tampering' %> 無
+      <br>  
+      <%= f.label :ndo, "支援的smart stream數目" %>
+      <%= f.text_field :ndo, value:'1' %>
+      <br>           
+      <%= f.label :tampering, "支援的smartstream模式" %>
+      <%= f.check_box :eptz, {}, true, false %> autotracking
+      <%= f.check_box :eptz, {}, true, false %> manual
+      <%= f.check_box :eptz, {}, true, false %> hybrid
+      <br>           
+      <%= f.label :ndo, "autotracking window數目" %>
+      <%= f.text_field :ndo, value:'1' %>
+      <br>      
+      <%= f.label :ndo, "hybrid_autotracking window數目" %>
+      <%= f.text_field :ndo, value:'1' %>
+      <br>       
+      <%= f.label :ndo, "hybrid_manual window數目" %>
+      <%= f.text_field :ndo, value:'1' %>
+      <br>
+    </div> 
+
+
     <%= f.submit "Create" %>
     <br>
+  </div>
 <% end  %>
