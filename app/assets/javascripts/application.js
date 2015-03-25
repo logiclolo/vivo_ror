@@ -16,7 +16,8 @@
 
 var strcodec;
 var ntable=3;
-var tablewidth = [241, 311, 381, 451];
+var restablewidth = [241, 311, 381, 451];
+var defaulttablewidth = [171, 311, 451, 591];
 
 
 jQuery(function() {
@@ -188,7 +189,7 @@ function MoveDown(mode)
   $(res_tablescroll_body + " tr[selected='1']").insertAfter($(res_tablescroll_body + " tr:eq("+ (Index + 1) +")"));
 }
 
-function expandTableScroll(obj, mode, width)
+function expandTableScroll(obj, mode, width, width2)
 {
   var add = $(obj).attr('id');
   var name;
@@ -206,6 +207,7 @@ function expandTableScroll(obj, mode, width)
     name = "mjpeg";
   }
   
+  /* Resolutions */
   //var width;
   // 70 and 2 are magic numbers
   //width = $("#res_tablescroll_head"+mode).width()+70+2;
@@ -214,17 +216,37 @@ function expandTableScroll(obj, mode, width)
   $("#res_tablescroll_body"+mode).css("width",width);
   $("#res_tablescroll_foot"+mode).css("width",width);
   $("#colgroup"+mode).append("<col class='"+name+"' width='70'/>");
-  $("#tablescroll_tr"+mode).append("<th class='"+name+"'  style='width: 70px;text-align:left'><span title='symbol'>MaxFPS (" + name + ")</span></th>");
+  $("#tablescroll_tr"+mode).append("<th class='"+name+"'  style='width: 70px;text-align:left'><span title='symbol'>Max FPS (" + name + ")</span></th>");
   
-  if($("#tbody").children() != null)
+  if($("#tbody"+mode).children() != null)
   {
-    $("#tbody").find('tr').each(function(){
+    $("#tbody"+mode).find('tr').each(function(){
       $(this).append("<td class='" + name + "' style='text-align:left'><input name='userinput["+name+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>")
     })
   }
+  
+  /* Default bitrate and framerate */
+  $("#default_tablescroll_head"+mode).css("width",width2);
+  $("#default_div_body"+mode).css("width",width2);
+  $("#default_tablescroll_body"+mode).css("width",width2);
+  $("#default_tablescroll_foot"+mode).css("width",width2);
+  $("#default_colgroup"+mode).append("<col class='"+name+"' width='70'/>");
+  $("#default_colgroup"+mode).append("<col class='"+name+"' width='70'/>");
+  $("#default_tablescroll_tr"+mode).append("<th class='"+name+"'  style='width: 70px;text-align:left'><span title='symbol'>Bitrate (" + name + ")</span></th>" +
+                                            "<th class='"+name+"'  style='width: 70px;text-align:left'><span title='symbol'>Framerate (" + name + ")</span></th>");
+  
+  if($("#default_tbody"+mode).children() != null)
+  {
+    $("#default_tbody"+mode).find('tr').each(function(){
+      $(this).append("<td class='" + name + "' style='text-align:left'><input name='userinput["+name+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>" +
+                      "<td class='" + name + "' style='text-align:left'><input name='userinput["+name+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>")
+    })
+  }
+  
+  
 }
 
-function reduceTableScroll(obj, mode, width)
+function reduceTableScroll(obj, mode, width, width2)
 {
   var remove = $(obj).attr('id');
   var name;
@@ -242,10 +264,15 @@ function reduceTableScroll(obj, mode, width)
     name = "mjpeg";
   }
   
-  $("#tbody tr").each(function() {
+  $("#tbody tr"+mode).each(function() {
    $(this).find("td."+name).remove();
   });
   
+  $("#default_tbody tr"+mode).each(function() {
+   $(this).find("td."+name).remove();
+  });
+  
+  /* Resolutions */
   //var width;
   // 70 and 2 are magic numbers
   //width = $("#res_tablescroll_head"+mode).width()-70+2;
@@ -255,6 +282,27 @@ function reduceTableScroll(obj, mode, width)
   $("#res_tablescroll_foot"+mode).css("width",width);
   $("#colgroup"+mode).find("col."+name).remove();
   $("#tablescroll_tr"+mode).find("th."+name).remove();
+  
+  /* Default bitrate and framerate */
+  $("#default_tablescroll_head"+mode).css("width",width2);
+  $("#default_div_body"+mode).css("width",width2);
+  $("#default_tablescroll_body"+mode).css("width",width2);
+  $("#default_tablescroll_foot"+mode).css("width",width2);
+  $("#default_colgroup"+mode).find("col."+name).remove();
+  $("#default_tablescroll_tr"+mode).find("th."+name).remove();
+}
+
+function addStreamsContent(mode)
+{
+  for (var i=0;i<userinput_nmediastream;i++)
+  {
+    $("#default_tbody"+mode).find("tr").remove();
+  }
+  
+  for (var i=0;i<userinput_nmediastream;i++)
+  {
+    $("#default_tbody"+mode).append("<tr><td><input name='userinput["+i+"]' type='checkbox'/></td><td title='" + i +"'>Stream " + (i+1) + "</td>");
+  }
 }
 
 function calNumberOfCodec()
@@ -262,31 +310,34 @@ function calNumberOfCodec()
   ncodec = 0;
   strcodec = "";
   
+  prepareTable();
+  
   $(".codec").each(function (){
     if($(this).is(":checked"))
     {
       ncodec = ncodec + 1;
       strcodec += $(this).attr('id').replace("userinput_","") + ',';//add codec string
       
-      for (i=0;i<ntable;i++)
+      for (var i=0;i<ntable;i++)
       {
         var mode = "_mode" + i;
-        expandTableScroll(this, mode,tablewidth[ncodec]);
+        expandTableScroll(this, mode, restablewidth[ncodec], defaulttablewidth[ncodec]);
       }
     }
   
   })
   
-  prepareTable();
+  
 }
 
 function prepareTable()
 {
   // initial all tables
-  for (i=0;i<ntable;i++)
+  for (var i=0;i<ntable;i++)
   {
     var mode = "_mode" + i;
     initVideoModeTable(mode);
+    addStreamsContent(mode);
   }
   
   // only show nmode tables
@@ -328,11 +379,35 @@ $(document).ready(function(){
         var active = $('#tabs').tabs('option', 'active');
         
         // first click video tab
-        if (active == 2 && first_click)  
+        if (active == 2)  
         {
-          first_click = false;
-          calNumberOfCodec();
+          if(first_click)
+          {
+            first_click = false;
+            calNumberOfCodec();
+          }
+          else
+          {
+              for (var i=0;i<ntable;i++)
+              {
+                var mode = "_mode" + i;
+                addStreamsContent(mode);
+                if($("#default_tbody"+mode).children() != null)
+                {
+                  var codec_name = strcodec.split(',') ;
+                  for (var j=0; j<ncodec;j++)
+                  {
+                    $("#default_tbody"+mode).find('tr').each(function(){
+                      $(this).append("<td class='" + codec_name[j] + "' style='text-align:left'><input name='userinput["+codec_name[j]+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>" +
+                                    "<td class='" + codec_name[j] + "' style='text-align:left'><input name='userinput["+codec_name[j]+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>")
+                
+                    })
+                  }
+                 }
+              }
+          }
         }
+ 
       }                                                                          
     }); 
     
@@ -346,7 +421,7 @@ $(document).ready(function(){
         for (i=0;i<ntable;i++)
         {
           var mode = "_mode" + i;
-          expandTableScroll(this, mode, tablewidth[ncodec]);
+          expandTableScroll(this, mode, restablewidth[ncodec], defaulttablewidth[ncodec]);
         }
       }
       else
@@ -356,7 +431,7 @@ $(document).ready(function(){
         for (i=0;i<ntable;i++)
         {
           var mode = "_mode" + i;
-          reduceTableScroll(this, mode, tablewidth[ncodec]);
+          reduceTableScroll(this, mode, restablewidth[ncodec], defaulttablewidth[ncodec]);
         }
       }
     });
