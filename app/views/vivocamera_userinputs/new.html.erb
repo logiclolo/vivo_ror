@@ -31,8 +31,8 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
     </ul>
     
     <div id="tabs-0">
-    <%= f.label :bootuptim, "bootuptim" %>
-    <%= f.text_field :bootuptim, value:'60' %>
+    <%= f.label :bootuptime, "bootuptim" %>
+    <%= f.text_field :bootuptime, value:'60' %>
     <br>
     <%= f.label :npir, "npir" %>
     <%= f.text_field :npir, value:'1' %>
@@ -158,16 +158,23 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
     
     <div id="tabs-2">
     
-    <%= f.label :support_codec, "Support Codec " %>
+    <%= f.label :codec, "Codec: " %>
     <%= f.check_box :h265, class: "codec", :checked => true %>H265
     <%= f.check_box :h264, class: "codec", :checked => false %>H264
     <%= f.check_box :mjpeg, class: "codec", :checked => false %>MJPEG
     <br>
-    <br>
-    <%= f.label :resolution_fps, "Resolution and MaxFPS " %>
-    <br>
+
+    <%= f.label :nmode, "Video mode 數目:" %>
+    <%= f.text_field :nmode, class: "params", value:'2' %>
     
-                    <table style="margin-left:0px">
+    <br>
+    <br>
+    <%= f.label :resolution_fps, "Resolution and MaxFPS: " %>
+    <br>
+                    <!-- video mode 0 table  -->
+                    <div id="div_videomode0" class="div_videomode" style="display:none">
+                    (Video mode 1)
+                    <table id="table_videomode0" style="margin-left:0px">
 											<tr>
 												<td>
 													<div class="tablescroll">
@@ -179,13 +186,13 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 															</thead>
 														</table>
 														<div class="tablescroll_wrapper" style="width: 222px; height: 130px; overflow-x: hidden; overflow-y: auto;">
-															<table cellspacing="0" style="table-layout: fixed; width: 220px;" id="table-preset" class="tablescroll_body">
+															<table cellspacing="0" style="table-layout: fixed; width: 220px;" id="table_resolution_mode0" class="tablescroll_body">
 																<colgroup>
 																	<col width="20"/>
 																	<col width="150"/>
 																</colgroup>
 																<tbody>
-																	<!-- Preset Locations Content -->
+																	<!-- Resolution selection Content -->
 																	<tr>
 																	  <td>
 																	    <input type="checkbox"/>
@@ -208,7 +215,7 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 														<table cellspacing="0" class="tablescroll_foot" style="width: 222px;">
 															<tfoot>
 																<tr>
-																	<th style="_width: 10px;"><input type="button" title="symbol" value="New" onclick="newResolution()"></th>
+																	<th style="_width: 10px;"><input type="button" title="symbol" value="New" onclick="newResolution('_mode0')"></th>
 																	<th style="_width: 210px;"><input type="button" title="symbol" value="more" style="float:right; display:none;" id="btn_adjPresetTbl" onclick="adjustPresetTbl(this)"/></th>
 																</tr>
 															</tfoot>
@@ -216,13 +223,13 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 													</div>
 												</td>
 												<td style="vertical-align: middle; width: 1px; padding: 0px 3px 0 3px;">
-													<input type="button" value=">>" style="padding: 1px; font: bold 11px arial;" onclick="pushResolution()"/>
+													<input type="button" value=">>" style="padding: 1px; font: bold 11px arial;" onclick="pushResolution('_mode0')"/>
 												</td>
 												<td>
 													<div class="tablescroll tablescroll-patrol">
-														  <table id="res_tablescroll_head" cellspacing="0" class="tablescroll_head" style="width:240px;table-layout:fixed">
+														  <table id="res_tablescroll_head_mode0" cellspacing="0" class="tablescroll_head" style="width:240px;table-layout:fixed">
 															<thead>
-															  <tr id="tablescroll_tr">
+															  <tr id="tablescroll_tr_mode0">
 																  <th style="width: 170px;"><span title="symbol">Resolution</span></th>
 																  <th style="width: 70px;"><span title="symbol">Max FPS</span></th>
 																  <!-- <th style="width: 70px;"><span title="symbol">Max FPS (under H264)</span></th>-->
@@ -230,28 +237,28 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 															</thead>
 														  </table>
 														  
-															<div id="res_tablescroll_body" class="tablescroll_wrapper" style="width:240px;height: 130px; overflow-x: hidden; overflow-y: auto;">
-															  <table cellspacing="0" style="table-layout: fixed; width: 240px;table-layout:fixed" id="table-patrol" class="tablescroll_body">
-																<colgroup id="colgroup">
+															<div id="res_div_body_mode0" class="tablescroll_wrapper" style="width:240px;height: 130px; overflow-x: hidden; overflow-y: auto;">
+															  <table cellspacing="0" style="table-layout: fixed; width: 240px;table-layout:fixed" id="res_tablescroll_body_mode0" class="tablescroll_body">
+																<colgroup id="colgroup_mode0">
 																  <col width="20"/>
 																	<col width="150"/>
 																	<col width="70"/>
 																
 																</colgroup>
 																<tbody id="tbody">
-																	<!-- Patrol Locations Content -->
+																	<!-- Selected resolution Content -->
 																
 																</tbody>
                                 </table>
 													    </div>
 													    
-															<table id="res_tablescroll_foot" cellspacing="0" class="tablescroll_foot" style="width:240px;" id="tblPatrolFootForIE6">
+															<table id="res_tablescroll_foot_mode0" cellspacing="0" class="tablescroll_foot" style="width:240px;" id="tblPatrolFootForIE6">
 															<tfoot>
 																<tr>
-																	<th style="_width: 20px;"><input type="button" title="symbol" value="remove" onclick="popResolution()"/></th>
+																	<th style="_width: 20px;"><input type="button" title="symbol" value="remove" onclick="popResolution('_mode0')"/></th>
 																	<th style="text-align: left; _width: 150px;">
-																		<input type="button" value="&#9650;" style="padding: 0 3px;" onclick="MoveUp()"/>
-																		<input type="button" value="&#9660;" style="padding: 0 3px;" onclick="MoveDown()"/>
+																		<input type="button" value="&#9650;" style="padding: 0 3px;" onclick="MoveUp('_mode0')"/>
+																		<input type="button" value="&#9660;" style="padding: 0 3px;" onclick="MoveDown('_mode0')"/>
 																	</th>
 																	<th><input type="button" title="symbol" value="more" style="display:none;" id="btn_adjPatrolTbl" onclick="adjustPatrolTbl(this)"/></th>
 																</tr>
@@ -262,16 +269,234 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 											</tr>
 											<tr>
 											  <td>
-											    <div id="new_resolution_content" class="special_area" style="display:none">
+											    <div id="res_tablescroll_new_mode0" class="special_area" style="display:none">
                             <span title="symbol" id="presetNameID">resolution</span>:
 											      <!--<label for="addPresetInput" class="pre overlay" style=""><span title="symbol">add_preset_location</span></label>-->
-												    <input type="text" id="new_resolution_input" name="addpos_temp" maxlength="40" value="" style="width:100px;" onKeyPress="return KeyPress(event);"/>
-												    <input type="button" title="symbol" value="add" onclick="addResolution();"/>
+												    <input type="text" id="new_resolution_input_mode0" name="addpos_temp" maxlength="40" value="" style="width:100px;" onKeyPress="return KeyPress(event);"/>
+												    <input type="button" title="symbol" value="add" onclick="addResolution('_mode0');"/>
 												  </div>
 											  </td>
 											</tr>
 										</table>
-      
+										</div>
+										
+										<!-- video mode 1 table  -->
+										<div id="div_videomode1" class="div_videomode" style="display:none">
+										(Video mode 2)
+                    <table id="table_videomode1" style="margin-left:0px">
+											<tr>
+												<td>
+													<div class="tablescroll">
+														<table cellspacing="0" class="tablescroll_head" style="width: 222px;">
+															<thead>
+																<tr>
+																	<th style="_width: 210px;"><span>Resolution</span></th>
+																</tr>
+															</thead>
+														</table>
+														<div class="tablescroll_wrapper" style="width: 222px; height: 130px; overflow-x: hidden; overflow-y: auto;">
+															<table cellspacing="0" style="table-layout: fixed; width: 220px;" id="table_resolution_mode1" class="tablescroll_body">
+																<colgroup>
+																	<col width="20"/>
+																	<col width="150"/>
+																</colgroup>
+																<tbody>
+																	<!-- Resolution selection Content -->
+																	<tr>
+																	  <td>
+																	    <input type="checkbox"/>
+																	  </td>
+																	  <td title="176x144" style="cursor: default;">
+																      176x144
+																    </td>
+																  </tr>
+																  <tr>
+																	  <td>
+																	    <input type="checkbox"/>
+																	  </td>
+																	  <td title="800x600" style="cursor: default;">
+																      800x600
+																    </td>
+																  </tr>
+																</tbody>
+															</table>
+														</div>
+														<table cellspacing="0" class="tablescroll_foot" style="width: 222px;">
+															<tfoot>
+																<tr>
+																	<th style="_width: 10px;"><input type="button" title="symbol" value="New" onclick="newResolution('_mode1')"></th>
+																	<th style="_width: 210px;"><input type="button" title="symbol" value="more" style="float:right; display:none;" id="btn_adjPresetTbl" onclick="adjustPresetTbl(this)"/></th>
+																</tr>
+															</tfoot>
+														</table>
+													</div>
+												</td>
+												<td style="vertical-align: middle; width: 1px; padding: 0px 3px 0 3px;">
+													<input type="button" value=">>" style="padding: 1px; font: bold 11px arial;" onclick="pushResolution('_mode1')"/>
+												</td>
+												<td>
+													<div class="tablescroll tablescroll-patrol">
+														  <table id="res_tablescroll_head_mode1" cellspacing="0" class="tablescroll_head" style="width:240px;table-layout:fixed">
+															<thead>
+															  <tr id="tablescroll_tr_mode1">
+																  <th style="width: 170px;"><span title="symbol">Resolution</span></th>
+																  <th style="width: 70px;"><span title="symbol">Max FPS</span></th>
+																  <!-- <th style="width: 70px;"><span title="symbol">Max FPS (under H264)</span></th>-->
+															  </tr>
+															</thead>
+														  </table>
+														  
+															<div id="res_div_body_mode1" class="tablescroll_wrapper" style="width:240px;height: 130px; overflow-x: hidden; overflow-y: auto;">
+															  <table cellspacing="0" style="table-layout: fixed; width: 240px;table-layout:fixed" id="res_tablescroll_body_mode1" class="tablescroll_body">
+																<colgroup id="colgroup_mode1">
+																  <col width="20"/>
+																	<col width="150"/>
+																	<col width="70"/>
+																
+																</colgroup>
+																<tbody id="tbody">
+																	<!-- Selected resolution Content -->
+																
+																</tbody>
+                                </table>
+													    </div>
+													    
+															<table id="res_tablescroll_foot_mode1" cellspacing="0" class="tablescroll_foot" style="width:240px;" id="tblPatrolFootForIE6">
+															<tfoot>
+																<tr>
+																	<th style="_width: 20px;"><input type="button" title="symbol" value="remove" onclick="popResolution('_mode1')"/></th>
+																	<th style="text-align: left; _width: 150px;">
+																		<input type="button" value="&#9650;" style="padding: 0 3px;" onclick="MoveUp('_mode1')"/>
+																		<input type="button" value="&#9660;" style="padding: 0 3px;" onclick="MoveDown('_mode1')"/>
+																	</th>
+																	<th><input type="button" title="symbol" value="more" style="display:none;" id="btn_adjPatrolTbl" onclick="adjustPatrolTbl(this)"/></th>
+																</tr>
+															</tfoot>
+														  </table>
+													</div>
+												</td>
+											</tr>
+											<tr>
+											  <td>
+											    <div id="res_tablescroll_new_mode1" class="special_area" style="display:none">
+                            <span title="symbol" id="presetNameID">resolution</span>:
+											      <!--<label for="addPresetInput" class="pre overlay" style=""><span title="symbol">add_preset_location</span></label>-->
+												    <input type="text" id="new_resolution_input_mode1" name="addpos_temp" maxlength="40" value="" style="width:100px;" onKeyPress="return KeyPress(event);"/>
+												    <input type="button" title="symbol" value="add" onclick="addResolution('_mode1');"/>
+												  </div>
+											  </td>
+											</tr>
+										</table>								
+										</div>
+										
+										<!-- video mode 2 table -->
+										<div id="div_videomode2" class="div_videomode" style="display:none">
+										(Video mode 3)
+                    <table id="table_videomode2" style="margin-left:0px">
+											<tr>
+												<td>
+													<div class="tablescroll">
+														<table cellspacing="0" class="tablescroll_head" style="width: 222px;">
+															<thead>
+																<tr>
+																	<th style="_width: 210px;"><span>Resolution</span></th>
+																</tr>
+															</thead>
+														</table>
+														<div class="tablescroll_wrapper" style="width: 222px; height: 130px; overflow-x: hidden; overflow-y: auto;">
+															<table cellspacing="0" style="table-layout: fixed; width: 220px;" id="table_resolution_mode2" class="tablescroll_body">
+																<colgroup>
+																	<col width="20"/>
+																	<col width="150"/>
+																</colgroup>
+																<tbody>
+																	<!-- Resolution selection Content -->
+																	<tr>
+																	  <td>
+																	    <input type="checkbox"/>
+																	  </td>
+																	  <td title="176x144" style="cursor: default;">
+																      176x144
+																    </td>
+																  </tr>
+																  <tr>
+																	  <td>
+																	    <input type="checkbox"/>
+																	  </td>
+																	  <td title="800x600" style="cursor: default;">
+																      800x600
+																    </td>
+																  </tr>
+																</tbody>
+															</table>
+														</div>
+														<table cellspacing="0" class="tablescroll_foot" style="width: 222px;">
+															<tfoot>
+																<tr>
+																	<th style="_width: 10px;"><input type="button" title="symbol" value="New" onclick="newResolution('_mode2')"></th>
+																	<th style="_width: 210px;"><input type="button" title="symbol" value="more" style="float:right; display:none;" id="btn_adjPresetTbl" onclick="adjustPresetTbl(this)"/></th>
+																</tr>
+															</tfoot>
+														</table>
+													</div>
+												</td>
+												<td style="vertical-align: middle; width: 1px; padding: 0px 3px 0 3px;">
+													<input type="button" value=">>" style="padding: 1px; font: bold 11px arial;" onclick="pushResolution('_mode2')"/>
+												</td>
+												<td>
+													<div class="tablescroll tablescroll-patrol">
+														  <table id="res_tablescroll_head_mode2" cellspacing="0" class="tablescroll_head" style="width:240px;table-layout:fixed">
+															<thead>
+															  <tr id="tablescroll_tr_mode2">
+																  <th style="width: 170px;"><span title="symbol">Resolution</span></th>
+																  <th style="width: 70px;"><span title="symbol">Max FPS</span></th>
+																  <!-- <th style="width: 70px;"><span title="symbol">Max FPS (under H264)</span></th>-->
+															  </tr>
+															</thead>
+														  </table>
+														  
+															<div id="res_div_body_mode2" class="tablescroll_wrapper" style="width:240px;height: 130px; overflow-x: hidden; overflow-y: auto;">
+															  <table cellspacing="0" style="table-layout: fixed; width: 240px;table-layout:fixed" id="res_tablescroll_body_mode2" class="tablescroll_body">
+																<colgroup id="colgroup_mode2">
+																  <col width="20"/>
+																	<col width="150"/>
+																	<col width="70"/>
+																
+																</colgroup>
+																<tbody id="tbody">
+																	<!-- Selected resolution Content -->
+																
+																</tbody>
+                                </table>
+													    </div>
+													    
+															<table id="res_tablescroll_foot_mode2" cellspacing="0" class="tablescroll_foot" style="width:240px;" id="tblPatrolFootForIE6">
+															<tfoot>
+																<tr>
+																	<th style="_width: 20px;"><input type="button" title="symbol" value="remove" onclick="popResolution('_mode2')"/></th>
+																	<th style="text-align: left; _width: 150px;">
+																		<input type="button" value="&#9650;" style="padding: 0 3px;" onclick="MoveUp('_mode2')"/>
+																		<input type="button" value="&#9660;" style="padding: 0 3px;" onclick="MoveDown('_mode2')"/>
+																	</th>
+																	<th><input type="button" title="symbol" value="more" style="display:none;" id="btn_adjPatrolTbl" onclick="adjustPatrolTbl(this)"/></th>
+																</tr>
+															</tfoot>
+														  </table>
+													</div>
+												</td>
+											</tr>
+											<tr>
+											  <td>
+											    <div id="res_tablescroll_new_mode2" class="special_area" style="display:none">
+                            <span title="symbol" id="presetNameID">resolution</span>:
+											      <!--<label for="addPresetInput" class="pre overlay" style=""><span title="symbol">add_preset_location</span></label>-->
+												    <input type="text" id="new_resolution_input_mode2" name="addpos_temp" maxlength="40" value="" style="width:100px;" onKeyPress="return KeyPress(event);"/>
+												    <input type="button" title="symbol" value="add" onclick="addResolution('_mode2');"/>
+												  </div>
+											  </td>
+											</tr>
+										</table>										
+                    </div>
     </div>
     
     <% if false %>

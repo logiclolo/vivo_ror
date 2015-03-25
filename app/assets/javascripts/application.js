@@ -15,7 +15,8 @@
 //= require_tree .
 
 var strcodec;
-var ncodec
+var ntable=3;
+var tablewidth = [241, 311, 381, 451];
 
 
 jQuery(function() {
@@ -34,19 +35,23 @@ function loadcurrentsetting()
 
 /* table scroll */
 
-function initPrestAndPatrolBlk()
+function initVideoModeTable(mode)
 {
-	// Init "add preset location"
+    // compose jquery selector strings
+    var res_tablescroll_body = "#res_tablescroll_body" + mode;
+    var table_resolution = "#table_resolution" + mode;
+  
+  	// Init "add preset location"
     $('label.pre').labelOver('overlay').show();
 
     // Preset - Select All or Clear
     $("#chk_SelAllPreset").click(function() {
-        $(this).attr("checked") ? $("#table-preset :checkbox").attr("checked", true) : $("#table-preset :checkbox").attr("checked", false);
+        $(this).attr("checked") ? $(table_resolution + " :checkbox").attr("checked", true) : $(table_resolution + " :checkbox").attr("checked", false);
     });
 
     // Patrol - Select All or Clear
     $("#chk_SelAllPatrol").click(function() {
-        $(this).attr("checked") ? $("#table-patrol :checkbox").attr("checked", true) : $("#table-patrol :checkbox").attr("checked", false);
+        $(this).attr("checked") ? $(res_tablescroll_body + " :checkbox").attr("checked", true) : $(res_tablescroll_body + " :checkbox").attr("checked", false);
     });
 
     // Generate Preset table
@@ -64,10 +69,10 @@ function initPrestAndPatrolBlk()
       }
     }
     */
-    $("#table-preset tbody").append(presetItemStr);
+    $(table_resolution + " tbody").append(presetItemStr);
     
     //Avoid draggin operation on this field.
-    $("#table-preset td:odd").live("mousedown", function(){
+    $(table_resolution + " td:odd").live("mousedown", function(){
         return false;
     });
 
@@ -89,37 +94,44 @@ function initPrestAndPatrolBlk()
 			patrolItemStr += "<tr><td><input type='checkbox'/></td><td title='"+ patrolName +"'>" + patrolName + "</td><td><input type='text' style='width:70px;' value='" + patrolDwell + "' maxlength='3'/></td></tr>";
         }
 		
-		$("#table-patrol tbody").append(patrolItemStr);
+		$("#res_tablescroll_body tbody").append(patrolItemStr);
     }
     */
 
     // Make Patrol locations Drag & Drop
-    //$("#table-patrol").tableDnD({ onDragClass: "myDragClass" });
-    //if (bIsWinMSIE) $("#table-patrol :checkbox").css("cursor", "default");
+    //$("#res_tablescroll_body").tableDnD({ onDragClass: "myDragClass" });
+    //if (bIsWinMSIE) $("#res_tablescroll_body :checkbox").css("cursor", "default");
 
-    $("#table-patrol tr").live('click', function(){
+    $(res_tablescroll_body + " tr").live('click', function(){
         $(this).siblings().attr("selected", 0).css("background", "#fff");
         $(this).attr("selected", 1).css("background", "#ccc");
     });
 
     // Finetune Patrol dwell time layout
-    $("#table-patrol :text").css("padding", "0 3px");
+    $(res_tablescroll_body + " :text").css("padding", "0 3px");
 }
 
-function newResolution()
+function newResolution(mode)
 {
-  $("#new_resolution_content").show();
+  $("#res_tablescroll_new"+mode).show();
 }
 
-function addResolution()
+function addResolution(mode)
 {
-  $("#table-preset tbody").append("<tr><td><input type='checkbox'/></td><td style='cursor: default;' title='" + $("#new_resolution_input").val()+ "'>" + $("#new_resolution_input").val() + "</td></tr>");
+  // compose jquery selector strings
+  var table_resolution = "#table_resolution" + mode;
+  
+  $(table_resolution + " tbody").append("<tr><td><input type='checkbox'/></td><td style='cursor: default;' title='" + $("#new_resolution_input"+mode).val()+ "'>" + $("#new_resolution_input"+mode).val() + "</td></tr>");
 }
 
-function pushResolution()
+function pushResolution(mode)
 {
+  // compose jquery selector strings
+  var res_tablescroll_body = "#res_tablescroll_body" + mode;
+  var table_resolution = "#table_resolution" + mode;
+  
   var res_str = "";
-  $("#table-preset :checked").each(function(i, obj){
+  $(table_resolution + " :checked").each(function(i, obj){
     
     var res_name = $(obj).parent().siblings().attr("title");
     //res_str += "<tr><td><input type='checkbox'/></td><td title='" + res_name +"'>" + res_name + "</td><td><input id='userinput_maxfps' style='padding: 0 3px; width: 70px;' type='text' value='30'/></td>";
@@ -135,39 +147,48 @@ function pushResolution()
     
   });
   
-  $("#table-patrol tbody").append(res_str);
+  $(res_tablescroll_body + " tbody").append(res_str);
   
   //Make new item Drag & Drop
-  //$("#table-patrol").tableDnD({ onDragClass: "myDragClass" });
-  //if (bIsWinMSIE) $("#table-patrol :checkbox").css("cursor", "default");
+  //$("#res_tablescroll_body").tableDnD({ onDragClass: "myDragClass" });
+  //if (bIsWinMSIE) $("#res_tablescroll_body :checkbox").css("cursor", "default");
 
 
 }
 
-function popResolution()
+function popResolution(mode)
 {
-  $("#table-patrol :checked").parent().parent().remove();
+  // compose jquery selector strings
+  var res_tablescroll_body = "#res_tablescroll_body" + mode;
+  
+  $(res_tablescroll_body + " :checked").parent().parent().remove();
 }
 
-function MoveUp()
+function MoveUp(mode)
 {
-  var Index = $("#table-patrol tr").index($("#table-patrol tr[selected='1']"));
+  // compose jquery selector strings
+  var res_tablescroll_body = "#res_tablescroll_body" + mode;
+  
+  var Index = $(res_tablescroll_body + " tr").index($(res_tablescroll_body + " tr[selected='1']"));
   if ( -1 == Index) return;
 
-  if ( Index == $("#table-patrol tr").index($("#table-patrol tr:first")) ) return;  // At first place
-    $("#table-patrol tr[selected='1']").insertBefore($("#table-patrol tr:eq("+ (Index-1) +")"));
+  if ( Index == $(res_tablescroll_body + " tr").index($(res_tablescroll_body + " tr:first")) ) return;  // At first place
+    $(res_tablescroll_body + " tr[selected='1']").insertBefore($(res_tablescroll_body + " tr:eq("+ (Index-1) +")"));
 }
 
-function MoveDown()
+function MoveDown(mode)
 {
-  var Index = $("#table-patrol tr").index($("#table-patrol tr[selected='1']"));
+  // compose jquery selector strings
+  var res_tablescroll_body = "#res_tablescroll_body" + mode;
+  
+  var Index = $(res_tablescroll_body + " tr").index($(res_tablescroll_body + " tr[selected='1']"));
   if ( -1 == Index ) return;
 
-  if ( Index == $("#table-patrol tr").index($("#table-patrol tr:last")) ) return;  // At last place
-  $("#table-patrol tr[selected='1']").insertAfter($("#table-patrol tr:eq("+ (Index + 1) +")"));
+  if ( Index == $(res_tablescroll_body + " tr").index($(res_tablescroll_body + " tr:last")) ) return;  // At last place
+  $(res_tablescroll_body + " tr[selected='1']").insertAfter($(res_tablescroll_body + " tr:eq("+ (Index + 1) +")"));
 }
 
-function expandTableScroll(obj)
+function expandTableScroll(obj, mode, width)
 {
   var add = $(obj).attr('id');
   var name;
@@ -185,15 +206,15 @@ function expandTableScroll(obj)
     name = "mjpeg";
   }
   
-  var width;
+  //var width;
   // 70 and 2 are magic numbers
-  width = $("#res_tablescroll_head").width()+70;
-  $("#res_tablescroll_head").css("width",width+2);
-  $("#res_tablescroll_body").css("width",width+2);
-  $("#table-patrol").css("width",width+2);
-  $("#res_tablescroll_foot").css("width",width+2);
-  $("#colgroup").append("<col class='"+name+"' width='70'/>");
-  $("#tablescroll_tr").append("<th class='"+name+"'  style='width: 70px;text-align:left'><span title='symbol'>MaxFPS (" + name + ")</span></th>");
+  //width = $("#res_tablescroll_head"+mode).width()+70+2;
+  $("#res_tablescroll_head"+mode).css("width",width);
+  $("#res_div_body"+mode).css("width",width);
+  $("#res_tablescroll_body"+mode).css("width",width);
+  $("#res_tablescroll_foot"+mode).css("width",width);
+  $("#colgroup"+mode).append("<col class='"+name+"' width='70'/>");
+  $("#tablescroll_tr"+mode).append("<th class='"+name+"'  style='width: 70px;text-align:left'><span title='symbol'>MaxFPS (" + name + ")</span></th>");
   
   if($("#tbody").children() != null)
   {
@@ -203,7 +224,7 @@ function expandTableScroll(obj)
   }
 }
 
-function reduceTableScroll(obj)
+function reduceTableScroll(obj, mode, width)
 {
   var remove = $(obj).attr('id');
   var name;
@@ -225,15 +246,15 @@ function reduceTableScroll(obj)
    $(this).find("td."+name).remove();
   });
   
-  var width;
+  //var width;
   // 70 and 2 are magic numbers
-  width = $("#res_tablescroll_head").width()-70;
-  $("#res_tablescroll_head").css("width",width+2);
-  $("#res_tablescroll_body").css("width",width+2);
-  $("#table-patrol").css("width",width+2);
-  $("#res_tablescroll_foot").css("width",width+2);
-  $("#colgroup").find("col."+name).remove();
-  $("#tablescroll_tr").find("th."+name).remove();
+  //width = $("#res_tablescroll_head"+mode).width()-70+2;
+  $("#res_tablescroll_head"+mode).css("width",width);
+  $("#res_div_body"+mode).css("width",width);
+  $("#res_tablescroll_body"+mode).css("width",width);
+  $("#res_tablescroll_foot"+mode).css("width",width);
+  $("#colgroup"+mode).find("col."+name).remove();
+  $("#tablescroll_tr"+mode).find("th."+name).remove();
 }
 
 function calNumberOfCodec()
@@ -247,22 +268,57 @@ function calNumberOfCodec()
       ncodec = ncodec + 1;
       strcodec += $(this).attr('id').replace("userinput_","") + ',';//add codec string
       
-      expandTableScroll(this);
+      for (i=0;i<ntable;i++)
+      {
+        var mode = "_mode" + i;
+        expandTableScroll(this, mode,tablewidth[ncodec]);
+      }
     }
   
   })
+  
+  prepareTable();
+}
+
+function prepareTable()
+{
+  // initial all tables
+  for (i=0;i<ntable;i++)
+  {
+    var mode = "_mode" + i;
+    initVideoModeTable(mode);
+  }
+  
+  // only show nmode tables
+  for (i=0;i<userinput_nmode;i++)
+  {
+    $("#div_videomode"+i).show();
+  }
 }
 
 $(document).ready(function(){
  
     loadcurrentsetting();
-    initPrestAndPatrolBlk(); 
     
+    // when changes setting ...
     $(".params").change( function(){
       var value = $(this).val();
       var id = $(this).attr('id');
       eval(id + "=" + value);
-      //alert(eval(id));
+      
+      //nmode
+      if (id == "userinput_nmode")
+      {
+          for (i=0;i<ntable;i++)
+          {
+            $("#div_videomode"+i).hide();
+          }
+          
+          for (i=0;i<userinput_nmode;i++)
+          {
+            $("#div_videomode"+i).show();
+          }
+      }
     });
     
     // tab event handler
@@ -285,20 +341,28 @@ $(document).ready(function(){
     $(".codec").bind( "click", function() {
       if($(this).is(":checked"))
       {
-        expandTableScroll(this);
-        ncodec = ncodec + 1;
+         ncodec = ncodec + 1;
         strcodec += $(this).attr('id').replace("userinput_","") + ','; //add codec strings
+        for (i=0;i<ntable;i++)
+        {
+          var mode = "_mode" + i;
+          expandTableScroll(this, mode, tablewidth[ncodec]);
+        }
       }
       else
       {
-        reduceTableScroll(this);
         ncodec = ncodec - 1;
         strcodec = strcodec.replace($(this).attr('id').replace("userinput_","")+",", ""); //remove codec strings
-        
+        for (i=0;i<ntable;i++)
+        {
+          var mode = "_mode" + i;
+          reduceTableScroll(this, mode, tablewidth[ncodec]);
+        }
       }
     });
-    
-    
+   
+ 
+
     // flickerless show or hide
     if ($("#userinput_iristype_fixed").is(":checked"))
     {
