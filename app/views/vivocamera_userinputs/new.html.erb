@@ -164,8 +164,8 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
     <%= f.check_box :mjpeg, class: "codec", :checked => false %>MJPEG
     <br>
 
-    <%= f.label :nmode, "Video mode 數目:" %>
-    <%= f.text_field :nmode, class: "params", value:'2' %>
+    <%= f.label :nvideomode, "Video mode 數目:" %>
+    <%= f.text_field :nvideomode, class: "params", value:'2' %>
     
     <br>
     <br>
@@ -173,10 +173,10 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
     <br>
                     <!-- video mode 0 table (resolution)  -->
                     <div id="div_videomode0" class="div_videomode" style="display:none">
-                    <span>-- Video mode 1 --</span>
+                    <%= f.label :resolution_fps, "-- Video mode 1 -- " %>
                     <br>
                     <span>Effective pixels:</span>
-                    <%= f.text_field :mode0_effectivepixels, style: "width:120px", value:'1920x1080' %>
+                    <%= f.text_field :videoin_c0_mode0_effectivepixel, style: "width:120px", value:'1920x1080' %>
                     
                     <table id="table_videomode0" class="vivotable" style="margin-left:0px">
 											<tr>
@@ -185,7 +185,7 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 														  <table id="res_tablescroll_head_mode0" cellspacing="0" class="tablescroll_head" style="width:240px;table-layout:fixed">
 															<thead>
 															  <tr id="tablescroll_tr_mode0">
-																  <th style="width: 170px;"><span title="symbol">Resolution</span></th>
+																  <th style="width: 170px;"><span title="symbol">All Resolution</span></th>
 																  <th style="width: 70px;"><span title="symbol">Max FPS</span></th>
 																  <!-- <th style="width: 70px;"><span title="symbol">Max FPS (under H264)</span></th>-->
 															  </tr>
@@ -338,7 +338,7 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 										
 										<!-- video mode 1 table  -->
 										<div id="div_videomode1" class="div_videomode" style="display:none">
-										<span>-- Video mode 2 --</span>
+										<%= f.label :resolution_fps, "-- Video mode 2 -- " %>
                     <br>
                     <span>Effective pixels:</span>
                     <%= f.text_field :mode1_effectivepixels, style: "width:120px", value:'1920x1080' %>
@@ -349,7 +349,7 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 														  <table id="res_tablescroll_head_mode1" cellspacing="0" class="tablescroll_head" style="width:240px;table-layout:fixed">
 															<thead>
 															  <tr id="tablescroll_tr_mode1">
-																  <th style="width: 170px;"><span title="symbol">Resolution</span></th>
+																  <th style="width: 170px;"><span title="symbol">All Resolution</span></th>
 																  <th style="width: 70px;"><span title="symbol">Max FPS</span></th>
 																  <!-- <th style="width: 70px;"><span title="symbol">Max FPS (under H264)</span></th>-->
 															  </tr>
@@ -502,7 +502,7 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 										<!-- video mode 2 table -->
 										
 										<div id="div_videomode2" class="div_videomode" style="display:none">
-										<span>-- Video mode 3 --</span>
+										<%= f.label :resolution_fps, "-- Video mode 3 -- " %>
                     <br>
                     <span>Effective pixels:</span>
                     <%= f.text_field :mode2_effectivepixels, style: "width:120px", value:'1920x1080' %>
@@ -513,7 +513,7 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
 														  <table id="res_tablescroll_head_mode2" cellspacing="0" class="tablescroll_head" style="width:240px;table-layout:fixed">
 															<thead>
 															  <tr id="tablescroll_tr_mode2">
-																  <th style="width: 170px;"><span title="symbol">Resolution</span></th>
+																  <th style="width: 170px;"><span title="symbol">All Resolution</span></th>
 																  <th style="width: 70px;"><span title="symbol">Max FPS</span></th>
 																  <!-- <th style="width: 70px;"><span title="symbol">Max FPS (under H264)</span></th>-->
 															  </tr>
@@ -661,75 +661,7 @@ IP camera name: <%= @vivocamera.name  %> ( <%= link_to "back" , root_path  %>)
                     </div>
     </div>
     
-    <% if false %>
-    <div id="tabs-2">
-      <%= f.label :nresolution, "nresolution" %>
-      <%= f.text_field :nresolution, value:'7', class: "params" %>
-      <br>
-      <%= f.label :resolution, "resolution" %>
-      <%= f.check_box :resolution1, :checked => true %>176x144
-      <%= f.check_box :resolution2, :checked => true %>320x240
-      <%= f.check_box :resolution3, :checked => true %>640x480
-      <%= f.check_box :resolution4, :checked => true %>800x600
-      <%= f.check_box :resolution5, :checked => true %>1280x960
-      <%= f.check_box :resolution6, :checked => true %>1600x1200
-      <%= f.check_box :resolution7, :checked => true %>2048x1536
-      <br>
-      <%= f.label :nmode, "nmode" %>
-      <%= f.text_field :nmode, value:'3', class: "params" %>
-      <br>
-      <div id="videomode0" class="list-head">
-        <%= f.label :nmode, "Video Mode 1:", class: "list-content-label" %>
-        <br>
-        <dl>
-          <div id="videomode0_stream0">
-            <dt>Stream 1 (Default Setting)</dt>
-            <%= f.label :resolution, "resolution" %>
-            <%= f.text_field :resolution, value:'2048x1536' %>
-            <br>
-            <%= f.label :resolution, "resolution" %>
-            <%= f.text_field :resolution, value:'2048x1536' %>
-            <br>
-            <%= f.label :resolution, "resolution" %>
-            <%= f.text_field :resolution, value:'2048x1536' %>
-            <br>
-            <%= f.label :resolution, "resolution" %>
-            <%= f.text_field :resolution, value:'2048x1536' %>
-            <br>
-          </div>
-        </dl>
-      </div>
-      <div id="videomode1" class="list-head">
-        <%= f.label :nmode, "Video Mode 2:", class: "list-content-label" %>
-        <br>
-        <dl>
-        <%= f.label :resolution, "resolution" %>
-        <%= f.check_box :resolution1, :checked => true %>176x144
-        <%= f.check_box :resolution2, :checked => true %>320x240
-        <%= f.check_box :resolution3, :checked => true %>640x480
-        <%= f.check_box :resolution4, :checked => true %>800x600
-        <%= f.check_box :resolution5, :checked => true %>1280x960
-        <%= f.check_box :resolution6, :checked => true %>1600x1200
-        <%= f.check_box :resolution7, :checked => true %>2048x1536
-      </div>
-      <div id="videomode2" class="list-head">
-        <%= f.label :nmode, "Video Mode 3:", class: "list-content-label" %>
-        <br>
-        <dl>
-        <%= f.label :resolution, "resolution" %>
-        <%= f.check_box :resolution1, :checked => true %>176x144
-        <%= f.check_box :resolution2, :checked => true %>320x240
-        <%= f.check_box :resolution3, :checked => true %>640x480
-        <%= f.check_box :resolution4, :checked => true %>800x600
-        <%= f.check_box :resolution5, :checked => true %>1280x960
-        <%= f.check_box :resolution6, :checked => true %>1600x1200
-        <%= f.check_box :resolution7, :checked => true %>2048x1536
-      </div>
-      
-    </div>
-    <% end %>
-    
-    
+
     <div id="tabs-4">
       <%= f.label :sensortype, "sensor 型號" %>
       <%= f.radio_button :sensortype, 'imx123' ,:checked => true %> imx123

@@ -136,13 +136,13 @@ function pushResolution(mode)
     
     var res_name = $(obj).parent().siblings().attr("title");
     //res_str += "<tr><td><input type='checkbox'/></td><td title='" + res_name +"'>" + res_name + "</td><td><input id='userinput_maxfps' style='padding: 0 3px; width: 70px;' type='text' value='30'/></td>";
-    res_str += "<tr><td><input name='userinput["+res_name+"]' type='checkbox'/></td><td title='" + res_name +"'>" + res_name + "</td>" +
-              "<td style='text-align:left'><input id='userinput[maxfps]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>";
+    res_str += "<tr><td><input name='userinput[r"+res_name+"]' type='checkbox'/></td><td title='" + res_name +"'>" + res_name + "</td>" +
+              "<td style='text-align:left'><input id='userinput[videoin_c0_mode0_maxframerate]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>";
    
     var codec_name = strcodec.split(',') ;
     for (i = 0; i < ncodec; i ++)
     {
-      res_str += "<td class='" + codec_name[i] + "' style='text-align:left'><input name='userinput["+codec_name[i]+"]'style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>";
+      res_str += "<td class='" + codec_name[i] + "' style='text-align:left'><input name='userinput[videoin_c0_mode"+mode+"_maxfps_"+codec_name[i]+"]'style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>";
     }
     res_str += "</tr>";
     
@@ -221,7 +221,7 @@ function expandTableScroll(obj, mode, width, width2)
   if($("#tbody"+mode).children() != null)
   {
     $("#tbody"+mode).find('tr').each(function(){
-      $(this).append("<td class='" + name + "' style='text-align:left'><input name='userinput["+name+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>")
+      $(this).append("<td class='" + name + "' style='text-align:left'><input name='userinput[videoin_c0_mode"+mode+"_maxfps_"+name+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>")
     })
   }
   
@@ -234,12 +234,13 @@ function expandTableScroll(obj, mode, width, width2)
   $("#default_colgroup"+mode).append("<col class='"+name+"' width='70'/>");
   $("#default_tablescroll_tr"+mode).append("<th class='"+name+"'  style='width: 70px;text-align:left'><span title='symbol'>Bitrate (" + name + ")</span></th>" +
                                             "<th class='"+name+"'  style='width: 70px;text-align:left'><span title='symbol'>Framerate (" + name + ")</span></th>");
-  
+  var stream = 0;
   if($("#default_tbody"+mode).children() != null)
   {
     $("#default_tbody"+mode).find('tr').each(function(){
-      $(this).append("<td class='" + name + "' style='text-align:left'><input name='userinput["+name+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>" +
-                      "<td class='" + name + "' style='text-align:left'><input name='userinput["+name+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>")
+      $(this).append("<td class='" + name + "' style='text-align:left'><input name='userinput[videoin_c0"+mode+"_s"+stream+"_defaultsetting_"+name+"_bitrate]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>" +
+                      "<td class='" + name + "' style='text-align:left'><input name='userinput[videoin_c0"+mode+"_s"+stream+"_defaultsetting_"+name+"_framerate]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>")
+      stream++;
     })
   }
   
@@ -340,13 +341,14 @@ function prepareTable()
     addStreamsContent(mode);
   }
   
-  // only show nmode tables
-  for (i=0;i<userinput_nmode;i++)
+  // only show nvideomode tables
+  for (i=0;i<userinput_nvideomode;i++)
   {
     $("#div_videomode"+i).show();
   }
 }
 
+/* Make sure HTML code is completely loaded */
 $(document).ready(function(){
  
     loadcurrentsetting();
@@ -357,15 +359,15 @@ $(document).ready(function(){
       var id = $(this).attr('id');
       eval(id + "=" + value);
       
-      //nmode
-      if (id == "userinput_nmode")
+      //nvideomode
+      if (id == "userinput_nvideomode")
       {
           for (i=0;i<ntable;i++)
           {
             $("#div_videomode"+i).hide();
           }
           
-          for (i=0;i<userinput_nmode;i++)
+          for (i=0;i<userinput_nvideomode;i++)
           {
             $("#div_videomode"+i).show();
           }
@@ -397,10 +399,11 @@ $(document).ready(function(){
                   var codec_name = strcodec.split(',') ;
                   for (var j=0; j<ncodec;j++)
                   {
+                    var stream=0;
                     $("#default_tbody"+mode).find('tr').each(function(){
-                      $(this).append("<td class='" + codec_name[j] + "' style='text-align:left'><input name='userinput["+codec_name[j]+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>" +
-                                    "<td class='" + codec_name[j] + "' style='text-align:left'><input name='userinput["+codec_name[j]+"]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>")
-                
+                      $(this).append("<td class='" + codec_name[j] + "' style='text-align:left'><input name='userinput[videoin_c0"+mode+"_s"+stream+"_defaultsetting_"+codec_name[j]+"_bitrate]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>" +
+                                    "<td class='" + codec_name[j] + "' style='text-align:left'><input name='userinput[videoin_c0"+mode+"_s"+stream+"_defaultsetting_"+codec_name[j]+"_framerate]' style='padding: 0 3px; width: 50px;' type='text' value='30'/></td>")
+                      stream = stream + 1;
                     })
                   }
                  }
